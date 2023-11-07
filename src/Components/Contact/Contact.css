@@ -1,0 +1,57 @@
+.contactContainer {
+  background: rgba(24, 24, 24, 1);
+}
+
+.contactItems {
+  text-align: center;
+}
+
+.contactItems h1 {
+  font-size: 40px;
+  font-weight: 700;
+  padding-block: 2rem;
+  color: white;
+}
+
+.contactItems p {
+  padding-bottom: 2rem;
+  font-size: 12px;
+  color: rgba(170, 170, 170, 1);
+}
+
+.formcontainer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.inputField {
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background: rgba(246, 246, 246, 1);
+}
+
+.inputField::placeholder {
+  color: rgba(186, 186, 186, 1);
+}
+
+.contactSubmit {
+  padding-block: 0.8rem;
+  margin-block: 4rem;
+  font-size: 20px;
+  border-radius: 3px;
+  font-weight: 700;
+  background: rgba(255, 204, 0, 1);
+}
+
+@media (min-width: 1100px) {
+  .contactItems h1 {
+    font-size: 70px;
+    padding: 4rem 0 2rem 0;
+  }
+
+  .contactItems p {
+    padding-bottom: 4rem;
+    font-size: 20px;
+  }
+}

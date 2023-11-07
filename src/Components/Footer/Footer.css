@@ -1,0 +1,145 @@
+.footerContainer {
+  background: rgba(0, 0, 0, 1);
+  padding-bottom: 2rem;
+}
+
+.footerTop {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.footerFirst .footerSocials {
+  padding-top: 40px;
+}
+
+.footerSecond,
+.footerThird,
+.footerFourth {
+  display: none;
+}
+
+.footerFifth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.footerFifthItem1 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cancel {
+  font-size: 12px;
+  color: rgba(186, 186, 186, 1);
+}
+
+hr {
+  width: 90%;
+  margin: 0 auto;
+  background: rgba(30, 30, 30, 1);
+}
+
+.footerDown .downbox {
+  padding: 20px 20px 0 20px;
+}
+
+.footerDown .copyright {
+  color: white;
+  font-size: 10px;
+  color: rgba(186, 186, 186, 1);
+  padding-top: 30px;
+}
+
+.footerDown .designer {
+  color: white;
+  font-size: 10px;
+  color: rgba(186, 186, 186, 1);
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+  .footerContainer {
+    width: 100vw;
+    margin-top: 40px;
+  }
+
+  .footerTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 2rem;
+  }
+
+  .footerFirst .footerSocials {
+    padding-top: 80px;
+  }
+
+  .footerSecond,
+  .footerThird,
+  .footerFourth {
+    display: block;
+    font-size: 15px;
+    color: rgb(139, 137, 137);
+  }
+
+  .footerSecond {
+    width: 20%;
+    padding-top: 30px;
+  }
+
+  .footerSecond .special {
+    padding-top: 60px;
+    font-size: 16px;
+  }
+
+  .footerSecond .contact {
+    font-size: 18px;
+  }
+
+  .footerThird .special {
+    font-size: 18px;
+    color: white;
+    padding-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .footerFourth .special {
+    font-size: 18px;
+    color: white;
+    padding-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .footerFifth {
+    display: block;
+    margin-top: 0;
+  }
+
+  .footerFifthItem1 {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .cancel {
+    font-size: 12px;
+    padding-top: 3px;
+    color: rgb(139, 137, 137);
+  }
+
+  .footerDown .downbox {
+    padding: 40px 50px 0 50px;
+  }
+
+  .footerDown .copyright {
+    padding-top: 0;
+  }
+
+  .footerDown .designer {
+    flex-direction: row;
+  }
+}

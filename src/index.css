@@ -1,13 +1,23 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* body {
+    font-family: "Raleway-Regular", Helvetica;
+    font-family: "Raleway-SemiBold", Helvetica;
+    font-family: "Raleway-Bold", Helvetica;
+    font-family: "Kannada Sangam MN-Bold", Helvetica;
+} */
+
+.container {
+    width: 1000px;
+    padding-inline: 1rem;
+    margin-inline: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (max-width: 1075px) {
+    .container {
+        width: auto;
+    }
 }
