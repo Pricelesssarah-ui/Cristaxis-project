@@ -31,7 +31,9 @@ const Header = ({ nav, setNav }) => {
     >
       <div className="container">
         <div className="flex justify-between items-center pl-10">
-          <img src={Logo} alt="logo" />
+          <Link to='/'>
+            <img src={Logo} alt="logo" />
+          </Link>
 
           <ul className="hidden md:flex items-center w-[50%]">
             {links.map(({ id, link }) => (

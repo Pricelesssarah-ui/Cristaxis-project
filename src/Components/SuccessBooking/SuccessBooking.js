@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import "./SuccessBooking.css";
 
-import Tick from "../../assets/images/svgs/tick_icon.svg";
+import Tick from "../../assets/images/svgs/success_tick.svg";
 
 function SuccessBooking() {
   return (
@@ -18,7 +18,7 @@ function SuccessBooking() {
           <div className="successItem flex flex-col items-center justify-center">
             <img src={Tick} alt="tick" />
             <h1 className="text-4xl font-bold py-5">Successful</h1>
-            <p className="text-center">
+            <p className="text-center text-xl py-2">
                 Thank you for your booking request, <br /> we’ll get in touch with your <br /> confirmation..
             </p>
             <button type="submit" className="returnSubmit">

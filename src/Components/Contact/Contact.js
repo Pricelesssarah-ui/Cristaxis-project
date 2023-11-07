@@ -1,6 +1,7 @@
 import React from "react";
 import "./Contact.css";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Contact() {
   return (
@@ -52,8 +53,11 @@ function Contact() {
               placeholder="Type Message Here"
             ></textarea>
 
+
             <button type="submit" className="contactSubmit">
-              SEND MESSAGE
+              <Link to='/SuccessContactpage'>
+                SEND MESSAGE
+              </Link>
             </button>
           </form>
         </div>

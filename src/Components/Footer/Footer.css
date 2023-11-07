@@ -62,7 +62,7 @@ hr {
   flex-direction: column-reverse;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   .footerContainer {
     width: 100vw;
     margin-top: 40px;

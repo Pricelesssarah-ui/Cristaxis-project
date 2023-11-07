@@ -12,6 +12,7 @@ import Icon150k from "../../assets/images/svgs/icon_150k.svg";
 import TestimonialImage from "../../assets/images/pngs/testimonial_img.png";
 import TipImg from "../../assets/images/pngs/tip_img.png";
 import Taxi from "../../assets/images/pngs/taxi_img.png";
+import { Link } from "react-router-dom";
 
 function Landingpage() {
   const slideLeft = () => {
@@ -40,7 +41,7 @@ function Landingpage() {
                 We are your reliable round the clock taxi service
               </p>
               <button className="bookAtaxi">BOOK A TAXI</button>
-              <button className="learnMore">LEARN MORE</button>
+              <button  className="learnMore"> <Link to='/about'>LEARN MORE</Link></button>
               <img src={ChatIcon} alt="chat" className="chaticon" />
             </div>
           </div>
@@ -128,7 +129,7 @@ function Landingpage() {
             </div>
 
             <div className="buttonContainer">
-              <button className="impactlearnmore">Learn More</button>
+              <button className="impactlearnmore"> <Link to='/about'>Learn More</Link></button>
             </div>
           </div>
         </div>

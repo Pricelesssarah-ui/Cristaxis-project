@@ -63,7 +63,7 @@
 .chaticon {
   width: 25px;
   height: 25px;
-  position: relative;
+  position: fixed;
   left: 90%;
   bottom: 0;
 }

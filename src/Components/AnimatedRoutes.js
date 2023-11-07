@@ -8,6 +8,9 @@ import About from "./About/About";
 import Footer from "./Footer/Footer";
 import Blog from "./Blog/Blog";
 import Contact from "./Contact/Contact";
+import SuccessContactpage from "./SuccessContactpage/SuccessContactpage";
+import SuccessBooking from "./SuccessBooking/SuccessBooking";
+
 
 function AnimatedRoutes() {
   const [nav, setNav] = useState(false);
@@ -21,6 +24,8 @@ function AnimatedRoutes() {
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact us" element={<Contact />} />
+        <Route path="/SuccessContactpage" element={<SuccessContactpage />} />
+        <Route path="/SuccessBooking" element={<SuccessBooking />} />
       </Routes>
       <Footer />
     </AnimatePresence>

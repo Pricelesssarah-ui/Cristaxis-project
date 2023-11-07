@@ -17,5 +17,9 @@
     .successItem h1 {
       font-size: 60px;
     }
+
+    .successItem p {
+      font-size: 25px;
+    }
   }
   
