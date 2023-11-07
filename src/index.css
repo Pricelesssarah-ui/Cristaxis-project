@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 
-/* body {
-    font-family: "Raleway-Regular", Helvetica;
+ body {
+    /* font-family: "Raleway-Regular", Helvetica;
     font-family: "Raleway-SemiBold", Helvetica;
-    font-family: "Raleway-Bold", Helvetica;
-    font-family: "Kannada Sangam MN-Bold", Helvetica;
-} */
+    font-family: "Raleway-Bold", Helvetica; */
+    font-family: "Kannada Sangam MN-Bold", Helvetica; 
+} 
 
 .container {
     width: 1200px;

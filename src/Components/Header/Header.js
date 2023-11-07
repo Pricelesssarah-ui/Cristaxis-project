@@ -30,12 +30,12 @@ const Header = ({ nav, setNav }) => {
             text-white"
     >
       <div className="container">
-        <div className="flex justify-between items-center pl-10">
+        <div className="flex justify-between items-center">
           <Link to='/'>
             <img src={Logo} alt="logo" />
           </Link>
 
-          <ul className="hidden md:flex items-center w-[50%]">
+          <ul className="Navlist hidden md:flex items-center justify-between w-[50%]">
             {links.map(({ id, link }) => (
               <li
                 key={id}
@@ -66,7 +66,7 @@ const Header = ({ nav, setNav }) => {
             <div
               onClick={() => setNav(!nav)}
               className="cursor-pointer  
-                  text-gray-500  md:hidden"
+                  text-gray-500  md:hidden mr-5"
             >
               {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
             </div>
@@ -74,7 +74,7 @@ const Header = ({ nav, setNav }) => {
             {nav && (
               <ul
                 className="flex flex-col justify-center items-center absolute
-                     top-0 left-0 w-full h-screen b-screen bg-gray-500 text-white"
+                     top-0 left-0 w-full h-screen b-screen bg-black text-white"
               >
                 {links.map(({ id, link }) => (
                   <li
