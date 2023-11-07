@@ -1,0 +1,68 @@
+.bookingContainer {
+
+}
+
+.bookingItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.bookingItems h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding-block: 2rem;
+}
+
+.formcontainer {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .bookinginputField {
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    background: rgba(246, 246, 246, 1);
+  }
+  
+  .bookinginputField::placeholder {
+    font-size: 13px;
+    color: rgba(117, 117, 117, 1);
+  }
+
+  .tripSchedule {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .contactSubmit {
+    padding-block: 0.8rem;
+    margin-block: 4rem;
+    font-size: 20px;
+    border-radius: 3px;
+    font-weight: 700;
+    background: rgba(255, 204, 0, 1);
+  }
+
+
+@media (min-width: 1100px) {
+
+    .bookingItems {
+        width: 60%;
+    } 
+
+    .bookingItems h1 {
+        font-size: 80px;
+        width: 90%;
+        line-height: 1.2;
+        padding-block: 4rem;
+    }
+
+    .tripSchedule {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+}

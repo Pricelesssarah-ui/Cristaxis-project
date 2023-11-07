@@ -8,8 +8,12 @@ import About from "./About/About";
 import Footer from "./Footer/Footer";
 import Blog from "./Blog/Blog";
 import Contact from "./Contact/Contact";
+import Booking from "./Booking/Booking";
 import SuccessContactpage from "./SuccessContactpage/SuccessContactpage";
 import SuccessBooking from "./SuccessBooking/SuccessBooking";
+import Terms from "./Terms/Terms";
+import Cancellation from "./Cancellation/Cancellation";
+
 
 
 function AnimatedRoutes() {
@@ -23,9 +27,12 @@ function AnimatedRoutes() {
         <Route path="/" element={<Landingpage />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/booking" element={<Booking />} />
         <Route path="/contact us" element={<Contact />} />
         <Route path="/SuccessContactpage" element={<SuccessContactpage />} />
         <Route path="/SuccessBooking" element={<SuccessBooking />} />
+        <Route path="/Terms" element={<Terms />} />
+        <Route path="/Cancellation" element={<Cancellation />} />
       </Routes>
       <Footer />
     </AnimatePresence>

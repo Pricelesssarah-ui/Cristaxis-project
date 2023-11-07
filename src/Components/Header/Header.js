@@ -50,7 +50,7 @@ const Header = ({ nav, setNav }) => {
 
             <button className="bookAtaxi text-black text-1xl">
               {" "}
-              <Link to="/contact" className="hover:scale-100 duration-300">
+              <Link to="/booking" className="hover:scale-100 duration-300">
                 BOOK A TAXI
               </Link>{" "}
             </button>

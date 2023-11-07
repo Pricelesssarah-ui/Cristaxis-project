@@ -1,29 +1,41 @@
 import React from "react";
 
-import "./Terms.css";
+import "./Cancellation.css";
 
-function Terms() {
+function Cancellation() {
   return (
-    <div className="termsContainer">
+    <div className="CancellationContainer">
       <div className="container">
-        <div className="termInner">
-          <h1>Terms and Conditions</h1>
-          <p className="termsText1 text-justify text-sm text-white">
-            These Terms and Conditions ("Terms") govern the use of our services
-            provided by Cris Taxis Cirencester and for bookings referred to us
-            from our partners or completed by us on their behalf ("The
-            business," "company,” “we," "us," or "our") and apply to all users
-            ("customer(s), "passenger," " "you," or "your") of our booking
-            platform, website, and related services. By contracting or using our
-            services, you agree to comply with these Terms. Please read these
-            Terms carefully before making any bookings.
+        <div className="CancellationInner">
+          <h1>Cancellation and Refunds Policy</h1>
+          <p className="CancellationText1 text-justify text-sm text-white">
+            This Cancellation and Refund Policy ("Policy") outlines the terms and conditions for cancellations 
+            and refunds associated with bookings made with Cris taxis Cirencester ("Company," "we," "us," or "our")
+            and for bookings referred to us from our partners or completed by us on their behalf. By making a booking or payment with/to us, you agree to comply with this Policy.
           </p>
 
           <div>
-            <ol className=" termsText2 text-justify">
-                <li className="text-white text-lg mt-9">1. Booking and general terms:</li>
-                <li>By making a booking through with us, you confirm that you are at least 18 years of age and have the
-                    legal authority to enter into agreements.
+            <ol className=" CancellationText2 text-justify">
+                <li className="text-white text-lg mt-9">1. General Policy:</li>
+                <li> In the event of a booking being cancelled, for which a deposit or prepayment has been made, we reserve the right
+        to retain such payments and refunds may be made at the discretion of the Company using the following scale as a
+        guide:
+                </li>
+                <li>
+                24 hours or less: no refund.
+                </li>
+                <li>
+                Over 24 hours: Full refund minus an admin fee of £7.00 (seven pounds) and a 2.5% transaction charge.
+                </li>
+                <li>
+                To cancel a booking, please contact us through the provided channels. Cancellation requests will be processed
+                according to the applicable cancellation policy.
+                </li>
+                <li>
+                If your booking is eligible for a refund, the following guidelines apply:
+                </li>
+                <li>
+                    
                 </li>
                 <li>You must specify a date,
               time, pickup and destination addresses as well as postcodes for
@@ -95,27 +107,30 @@ function Terms() {
               from weddings, events and parties. Bookings from such venues are
               not confirmed until they are paid for, unless otherwise agreed.
               </li>
-              <li className="text-white text-lg mt-9">3. Cancellations and Modifications: </li>
-              <li> Cancellation policies vary
-              depending on the service you book. Please review the specific
-              cancellation policy associated with your booking before
-              confirming. 
+              <li className="text-white text-lg mt-9">3. Event hire </li>
+              <li> All hires will start and end at the contracted times. Extensions on the day of event can be arranged, subject to
+        availability and additional charges.
               </li>
               <li>
-              To cancel or modify a booking, you may be required to
-              contact us via phone or email.  Cancellation fees may apply
-              according to the applicable cancellation policy.
+              Trips will be undertaken at the direction of the hirer or their appointed representative. Where none of those
+        are available, the directions of guests or passengers will be taken.
               </li>
               <li>
-              Changes in the
-              booking, such as date and/or time changes, address changes, etc.,
-              may result in additional charges.
-              </li>
-              <li className="text-white text-lg mt-9">4. Refunds: </li>
+              It is the responsibility of the hirer to make appropriate arrangements to maximise the use of time. The business
+            accepts no liability or responsibility for the sequence of journeys or lack thereof.
+        </li>
+            <li>
+                A driver and vehicle will be at the disposal of the hirer for the duration of hire and will remain on site
+                for the said duration if no journeys are being undertaken.
+            </li>
+            <li>
+            If during the duration of hire no trips are undertaken for any reason other than a vehicle or driver being
+        present, our no-show policy applies.
+            </li>
+              <li className="text-white text-lg mt-9">4. No-Show Policy: </li>
               <li>
-              Refund eligibilityis determined by the cancellation policy associated with your
-              booking. Refunds, if applicable, will be processed within seven
-              days from the date of cancellation.
+              If you fail to show up for a booked service without prior notice or cancelation, you may be considered a
+        &#34;no-show.&#34;
               </li>
               <li>
               Refunds will be issued using
@@ -193,4 +208,4 @@ function Terms() {
   );
 }
 
-export default Terms;
+export default Cancellation;

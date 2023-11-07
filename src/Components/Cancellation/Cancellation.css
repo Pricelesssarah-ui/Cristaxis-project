@@ -1,24 +1,24 @@
-.termsContainer {
+.CancellationContainer {
     background: 
     rgba(24, 24, 24, 1);
 
 }
 
-.termInner {
+.CancellationInner {
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: 0 auto;
 }
 
-.termInner h1 {
+.CancellationInner h1 {
     font-size: 30px;
     padding-block: 2rem;
     font-weight: 700;
     color: rgba(255, 255, 255, 1);
 }
 
-.termsText2 {
+.CancellationText2 {
     padding-block: 2rem;
     color: rgba(186, 186, 186, 1);
 }
@@ -26,17 +26,17 @@
 
 
 @media (min-width: 1100px) {
-    .termInner h1 {
+    .CancellationInner h1 {
         font-size: 70px;
         padding-block: 4rem;
     }
 
-    .termInner .termsText1 {
+    .CancellationInner .termsText1 {
         font-size: 20px;
         line-height: 1;
     }
 
-    .termsText2 li {
+    .CancellationText2 li {
         font-size: 20px;
     }
     
