@@ -1,7 +1,8 @@
 .containerHome {
-  width: 100vw;
+  width: 90vw;
   overflow-x: hidden;
-  overflow-y: hidden;
+  margin-inline: 0;
+  padding-inline: 0;
 }
 
 .homePage {
@@ -227,7 +228,7 @@ h2 {
 }
 
 .tipsContainer {
-  margin-block: 2rem;
+  margin-block: 4rem;
 }
 
 .tipsTitle {
@@ -276,20 +277,22 @@ h2 {
 }
 
 .taxiContainer {
-  background: rgba(255, 204, 0, 1);
-  border-radius: 10px;
   padding-bottom: 2rem;
 }
 
 .taxiMain {
-  display: block;
+  background: rgba(255, 204, 0, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
   margin: 20px;
-  padding-block: 10px;
+  padding-block: 40px;
 }
 
 .taxiMain img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
 }
 
 .taxiText {
@@ -299,9 +302,13 @@ h2 {
   padding-block: 30px;
 }
 
-.taxiText h1 {
+.taxiText h2 {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 25px;
+}
+
+.taxiText p {
+  font-size: 15px;
 }
 
 .taxiText .impactlearnmore {
@@ -319,20 +326,20 @@ h2 {
   }
 
   .textWrapper {
-    padding-block: 17rem;
+    padding-block: 12rem;
     padding-inline: 0;
     margin-inline: 0;
   }
 
   .heading {
-    font-size: 90px;
+    font-size: 100px;
     font-weight: 700;
     width: 70%;
   }
 
   .someText {
     padding-block: 50px;
-    font-size: 30px;
+    font-size: 40px;
     width: 55%;
   }
 
@@ -375,7 +382,7 @@ h2 {
   }
 
   .serviceBox {
-    width: 90%;
+    width: 80%;
     height: 85%;
     margin: 30px;
   }
@@ -448,10 +455,10 @@ h2 {
   }
 
   .taxiMain {
-    display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top: 50px;
-    padding-block: 0;
+    padding-block: 50px;
     padding-inline: 40px;
   }
 
@@ -463,18 +470,18 @@ h2 {
   .taxiText {
     align-items: start;
     padding-block: 0;
+    margin-right: 4rem;
   }
 
-  .taxiText h1 {
+  .taxiText h2 {
     font-weight: 700;
-    font-size: 50px;
+    font-size: 60px;
+    line-height: 1;
     width: 90%;
-    line-height: 1.2;
   }
 
   .taxiText p {
-    font-size: 25px;
-    width: 90%;
+    font-size: 35px;
     padding-block: 20px;
   }
 

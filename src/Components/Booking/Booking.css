@@ -38,14 +38,35 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .chooseCar {
+    padding: 1rem 1.5rem;
+    background: rgba(246, 246, 246, 1);
+  }
+
+  .chooseCar2 {
+    margin-top: 1rem;
+  }
+
+  .chooseCar p{
+    font-size: 8px;
+  }
   
-  .contactSubmit {
-    padding-block: 0.8rem;
+.bookTerms {
+    font-size: 10px;
+}
+
+  .bookingSubmit {
+    padding-block: 0.5rem;
+    width: 50%;
     margin-block: 4rem;
-    font-size: 20px;
     border-radius: 3px;
     font-weight: 700;
     background: rgba(255, 204, 0, 1);
+  }
+
+  .contactText {
+    font-size: 12px;
   }
 
 
@@ -62,7 +83,28 @@
         padding-block: 4rem;
     }
 
+    .carContainer {
+        flex-direction: row;
+    }
+
+    .chooseCar2 {
+        margin-top: 0;
+      }
+    
+
     .tripSchedule {
         grid-template-columns: 1fr 1fr 1fr;
+      }
+
+    .tripInput {
+        padding-inline: 2rem;
+    }
+
+    .bookingSubmit {
+        width: 30%;
+      }
+    
+      .contactText {
+        font-size: 17px;
       }
 }

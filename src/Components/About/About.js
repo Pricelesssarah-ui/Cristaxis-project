@@ -10,6 +10,7 @@ import AboutImg2 from "../../assets/images/pngs/about_2.png";
 import AboutImg3 from "../../assets/images/pngs/about_3.png";
 import AboutImg4 from "../../assets/images/pngs/about_4.png";
 import AboutTaxi from "../../assets/images/pngs/about_taxi.png";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -21,30 +22,30 @@ function About() {
     <div className="aboutContainer">
       <div className="container">
         <div>
-          <h2>Fueled by the passion to get you there</h2>
+          <h1>Fueled by the passion to get you there</h1>
 
           <div className="aboutusimgtxt flex flex-col">
             <img src={AboutImg} alt="aboutimg" />
 
             <div className="aboutflextext">
-              <h4>Wherever you want to go, we will get you there!</h4>
+              <h2>Wherever you want to go, we will get you there!</h2>
 
               <ul>
-                <li className="aboutlistitem flex">
+                <li className="aboutlistitem flex text-justify">
                   {" "}
                   <img src={Tick} alt="tick" /> We believe in making
                   transportation accessible to everyone. We strive to
                   accommodate passengers with diverse needs, ensuring that our
                   services are inclusive and adaptable.
                 </li>
-                <li className="aboutlistitem flex">
+                <li className="aboutlistitem flex text-justify">
                   {" "}
                   <img src={Tick} alt="tick" /> We uphold a high standard of
                   professionalism in our interactions, both with our customers
                   and within our team. Our drivers are trained to provide
                   courteous and respectful service at all times.
                 </li>
-                <li className="aboutlistitem flex">
+                <li className="aboutlistitem flex text-justify">
                   {" "}
                   <img src={Tick} alt="tick" /> Our passengers are at the heart
                   of everything we do. We actively listen to their feedback and
@@ -89,7 +90,7 @@ function About() {
           <div className="taxiMain  aboutTaxiMain">
             <div className="taxiText aboutTaxiText">
               <h1>Let’s help you get there</h1>
-              <button className="impactlearnmore">Book a taxi</button>
+              <button className="impactlearnmore"> <Link to='/booking'>Book a taxi</Link></button>
             </div>
             <img src={AboutTaxi} alt="taxi" />
           </div>

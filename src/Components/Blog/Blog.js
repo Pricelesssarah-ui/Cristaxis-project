@@ -6,6 +6,7 @@ import "./Blog.css";
 import TipImg from "../../assets/images/pngs/tip_img.png";
 import Arrow from "../../assets/images//svgs/arrow_icon.svg";
 import Taxi from "../../assets/images/pngs/taxi_img.png";
+import { Link } from "react-router-dom";
 
 function Blog() {
   const data = [
@@ -81,7 +82,7 @@ function Blog() {
         <div className="blogBg">
           <div className="container">
             <div className="blogItems">
-              <h5>Tips and Updates</h5>
+              <h1>Tips and Updates</h1>
 
               <div className="blogImg TipText py-4">
                 {data.map(({ id, imgUrl, content, dateTime }) => (
@@ -103,12 +104,15 @@ function Blog() {
           </div>
 
           <div className="blogtaxiContainer">
-            <div className="blogcontainer">
+            <div className="container">
               <div className="blogtaxiMain">
                 <div className="blogtaxiText">
                   <h1>Let’s help you get there</h1>
                   <p>Book a taxi in few seconds to get started</p>
-                  <button className="impactlearnmore">Book a taxi</button>
+                  <button className="impactlearnmore">
+                    {" "}
+                    <Link to="/booking">Book a taxi</Link>
+                  </button>
                 </div>
                 <img src={Taxi} alt="" />
               </div>

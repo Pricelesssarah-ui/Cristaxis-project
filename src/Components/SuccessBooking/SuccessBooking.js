@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import "./SuccessBooking.css";
 
 import Tick from "../../assets/images/svgs/success_tick.svg";
+import { Link } from "react-router-dom";
 
 function SuccessBooking() {
   return (
@@ -19,10 +20,11 @@ function SuccessBooking() {
             <img src={Tick} alt="tick" />
             <h1 className="text-4xl font-bold py-5">Successful</h1>
             <p className="text-center text-xl py-2">
-                Thank you for your booking request, <br /> we’ll get in touch with your <br /> confirmation..
+              Thank you for your booking request, <br /> we’ll get in touch with
+              your <br /> confirmation..
             </p>
             <button type="submit" className="returnSubmit">
-              Return to Home Page
+              <Link to="/">Return to Home Page</Link>
             </button>
           </div>
         </div>

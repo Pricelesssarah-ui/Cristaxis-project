@@ -31,11 +31,11 @@ const Header = ({ nav, setNav }) => {
     >
       <div className="container">
         <div className="flex justify-between items-center">
-          <Link to='/'>
+          <Link to="/">
             <img src={Logo} alt="logo" />
           </Link>
 
-          <ul className="Navlist hidden md:flex items-center justify-between w-[50%]">
+          <ul className="Navlist hidden md:flex items-center justify-between w-[60%]">
             {links.map(({ id, link }) => (
               <li
                 key={id}
@@ -48,7 +48,7 @@ const Header = ({ nav, setNav }) => {
               </li>
             ))}
 
-            <button className="bookAtaxi text-black text-1xl">
+            <button className="bookAtaxi text-black">
               {" "}
               <Link to="/booking" className="hover:scale-100 duration-300">
                 BOOK A TAXI

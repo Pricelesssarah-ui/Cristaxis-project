@@ -23,9 +23,7 @@ function SuccessContactpage() {
               Message received. <br /> Check your email later for a response.
             </p>
             <button type="submit" className="returnSubmit">
-              <Link to="/">
-                Return to Home Page
-              </Link>
+              <Link to="/">Return to Home Page</Link>
             </button>
           </div>
         </div>

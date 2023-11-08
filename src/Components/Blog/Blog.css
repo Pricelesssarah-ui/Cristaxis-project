@@ -4,110 +4,115 @@
 } */
 
 .blogContainer {
-    padding-block: 2rem;
+  padding-block: 2rem;
 }
 
-.blogItems h5 {
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    line-height: 1.2;
-    padding-block: 2rem;
+.blogItems h1 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+  padding-block: 2rem;
+  padding-inline: 0;
 }
 
 .blogImg {
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .blogtaxiContainer {
-    background: rgba(255, 204, 0, 1);
-    border-radius: 10px;
-    padding-bottom: 2rem;
-  }
-  
-  .blogtaxiMain {
-    display: block;
-    margin: 20px;
-    padding-block: 10px;
-  }
-  
-  .blogtaxiMain img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .blogtaxiText {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-block: 30px;
-  }
-  
-  .blogtaxiText h1 {
-    font-weight: 700;
-    font-size: 30px;
-  }
-  
-  .blogtaxiText .impactlearnmore {
-    margin-block: 10px;
-    width: 50%;
-  }
-  
+  padding-bottom: 2rem;
+}
 
+.blogtaxiMain {
+  background: rgba(255, 204, 0, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  margin: 20px;
+  padding-block: 40px;
+}
+
+.blogtaxiMain img {
+  width: 80%;
+  height: 80%;
+}
+
+.blogtaxiText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 30px;
+}
+
+.blogtaxiText h1 {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.taxiText p {
+  font-size: 15px;
+}
+
+.blogtaxiText .impactlearnmore {
+  margin-block: 10px;
+  width: 50%;
+}
 
 @media (min-width: 1100px) {
-    .blogItems h5 {
-        font-size: 120px;
-        line-height: 1.1;
-        padding-block: 4rem;
-    }
+  .blogItems h1 {
+    font-size: 110px;
+    line-height: 1.1;
+    padding-block: 4rem;
+    padding-inline: 10rem;
+  }
 
-    .blogImg {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+  .blogImg {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
-    .blogtaxiContainer {
-        padding-top: 2rem;
-        margin: 0 auto;
-      }
-    
-      .blogtaxiMain {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 50px;
-        padding-block: 0;
-        padding-inline: 40px;
-      }
-    
-      .blogtaxiMain img {
-        width: 50%;
-        height: 280px;
-      }
-    
-      .blogtaxiText {
-        align-items: start;
-        padding-block: 0;
-      }
-    
-      .blogtaxiText h1 {
-        font-weight: 700;
-        font-size: 50px;
-        width: 90%;
-        line-height: 1.2;
-      }
-    
-      .blogtaxiText p {
-        font-size: 25px;
-        width: 90%;
-        padding-block: 20px;
-      }
-    
-      .blogtaxiText .impactlearnmore {
-        margin-block: 10px;
-        width: 140px;
-        font-size: 20px;
-      }
-    
+  .blogtaxiContainer {
+    padding-top: 2rem;
+    margin: 0 auto;
+  }
+
+  .blogtaxiMain {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-block: 50px;
+    padding-inline: 40px;
+  }
+
+  .blogtaxiMain img {
+    width: 50%;
+    height: 280px;
+  }
+
+  .blogtaxiText {
+    align-items: start;
+    padding-block: 0;
+    margin-right: 4rem;
+  }
+
+  .blogtaxiText h1 {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 1;
+    width: 90%;
+  }
+
+  .blogtaxiText p {
+    font-size: 35px;
+    padding-block: 20px;
+  }
+
+  .blogtaxiText .impactlearnmore {
+    margin-block: 10px;
+    width: 140px;
+    font-size: 20px;
+  }
 }

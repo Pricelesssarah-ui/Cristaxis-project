@@ -40,8 +40,14 @@ function Landingpage() {
               <p className="someText">
                 We are your reliable round the clock taxi service
               </p>
-              <button className="bookAtaxi">BOOK A TAXI</button>
-              <button  className="learnMore"> <Link to='/about'>LEARN MORE</Link></button>
+              <button className="bookAtaxi">
+                {" "}
+                <Link to="/booking">BOOK A TAXI</Link>
+              </button>
+              <button className="learnMore">
+                {" "}
+                <Link to="/about">LEARN MORE</Link>
+              </button>
               <img src={ChatIcon} alt="chat" className="chaticon" />
             </div>
           </div>
@@ -129,7 +135,10 @@ function Landingpage() {
             </div>
 
             <div className="buttonContainer">
-              <button className="impactlearnmore"> <Link to='/about'>Learn More</Link></button>
+              <button className="impactlearnmore">
+                {" "}
+                <Link to="/about">Learn More</Link>
+              </button>
             </div>
           </div>
         </div>
@@ -189,7 +198,7 @@ function Landingpage() {
         <div className="tipsContainer">
           <div className="container">
             <div className="tipsTitle">
-              <h3>Tips & Updates</h3>
+              <h2>Tips & Updates</h2>
               <div className="flex items-center">
                 <p className="pr-2">View all</p>
                 <p>
@@ -269,9 +278,12 @@ function Landingpage() {
           <div className="container">
             <div className="taxiMain">
               <div className="taxiText">
-                <h1>Let’s help you get there</h1>
+                <h2>Let’s help you get there</h2>
                 <p>Book a taxi in few seconds to get started</p>
-                <button className="impactlearnmore">Book a taxi</button>
+                <button className="impactlearnmore">
+                  {" "}
+                  <Link to="/booking">Book a taxi</Link>
+                </button>
               </div>
               <img src={Taxi} alt="" />
             </div>
