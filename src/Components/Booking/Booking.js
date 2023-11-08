@@ -23,7 +23,7 @@ function Booking() {
     
             <>
               <label className="font-bold text-xl pb-4">Route Details</label>
-              <div className="Input1 flex flex-col">
+              <p className="input-with-image">
                 <input
                   type="text"
                   className="bookinginputField py-4 px-10"
@@ -37,8 +37,10 @@ function Booking() {
                   height={20}
                   className="sendImg"
                   alt="send"
-                />
-              </div>
+                />  
+              </p>
+
+              <div className="input-with-image">
               <input
                 type="text"
                 className="bookinginputField py-4 px-10 my-3"
@@ -46,7 +48,13 @@ function Booking() {
                 required
               />
 
-              <img src={MapIcon} width={20} height={20} alt="mapicon" />
+              <img 
+              src={MapIcon} 
+              width={20} 
+              height={20} 
+              className="mapicon"
+              alt="mapicon" />
+              </div>
             </>
 
             <>

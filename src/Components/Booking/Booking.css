@@ -34,6 +34,24 @@
     color: rgba(117, 117, 117, 1);
   }
 
+  .input-with-image {
+    position: relative;
+    display: inline-block;
+  }
+
+  .input-with-image input {
+    padding-right: 20rem; /* Adjust this value based on the image width */
+  }
+
+  .input-with-image img {
+    position: absolute;
+    top: 50%;
+    right: 30px; /* Adjust this value based on your design */
+    transform: translateY(-50%);
+    width: 20px; /* Adjust the width of the image */
+    height: 20px; /* Adjust the height of the image */
+  }
+
   .tripSchedule {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
