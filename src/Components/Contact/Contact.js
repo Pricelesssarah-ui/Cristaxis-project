@@ -28,24 +28,28 @@ function Contact() {
           >
             <input
               type="text"
+              name="name"
               className="inputField py-3 px-2"
               placeholder="Name:"
               required
             />
             <input
               type="text"
+              name="phoneNumber"
               className="inputField py-3 px-2 my-3"
               placeholder="Phone Number:"
               required
             />
             <input
               type="email"
+              name="email"
               className="inputField py-3 px-2"
               placeholder="Email Address:"
               required
             />
             <input
               type="text"
+              name="companyName"
               className="inputField py-3 px-2 my-3"
               placeholder="Company Name:"
               required
@@ -53,6 +57,7 @@ function Contact() {
 
             <textarea
               rows={8}
+              name="textarea"
               className="inputField p-2 "
               placeholder="Type Message Here"
             ></textarea>
