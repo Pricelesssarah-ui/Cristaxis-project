@@ -305,6 +305,7 @@ h2 {
 .taxiText h2 {
   font-weight: 700;
   font-size: 25px;
+  text-align: center;
 }
 
 .taxiText p {
@@ -478,6 +479,7 @@ h2 {
     font-size: 60px;
     line-height: 1;
     width: 90%;
+    text-align: left;
   }
 
   .taxiText p {

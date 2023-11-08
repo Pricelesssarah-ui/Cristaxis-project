@@ -55,10 +55,7 @@ const Header = ({ nav, setNav }) => {
               </Link>{" "}
             </button>
             <button className="callUs rounded text-black">
-              {" "}
-              <Link to="/contact" className="hover:scale-100 duration-300">
                 CALL US
-              </Link>{" "}
             </button>
           </ul>
 
@@ -106,15 +103,12 @@ const Header = ({ nav, setNav }) => {
                 </button>
 
                 <button className="callUs rounded text-black">
-                  <Link
-                    to="/contact"
                     onClick={() => setNav(!nav)}
                     smooth
                     duration={300}
                     className="hover:scale-100 duration-300 text-sm"
-                  >
+                  
                     Call us
-                  </Link>
                 </button>
               </ul>
             )}
