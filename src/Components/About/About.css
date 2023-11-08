@@ -4,7 +4,8 @@
 }
 
 .aboutContainer h1 {
-  padding-block: 2rem;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
   padding-inline: 0;
   font-size: 30px;
   font-weight: 700;
@@ -63,7 +64,8 @@
   }
 
   .aboutContainer h1 {
-    padding-block: 5rem;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
     font-size: 90px;
   }
 

@@ -62,27 +62,27 @@ function Booking() {
                 Choose your car
               </label>
                 <div className="carContainer flex flex-col justify-between">
-                    <div className="chooseCar">
+                  <div className="chooseCar">
                     <input type="checkbox" />
                     <div className="flex items-end">
-                        <div className="pr-3 pt-3">
-                        <h2 className="text-sm text-left py-0">Car</h2>
-                        <p>4 passengers max</p>
-                        </div>
-                        <img src={CarImg} width={130} height={130} alt="car" />
+                      <div className="pr-3 pt-3">
+                      <h2 className="text-sm text-left py-0">Car</h2>
+                      <p>4 passengers max</p>
+                      </div>
+                      <img src={CarImg} width={130} height={130} alt="car" />
                     </div>
-                    </div>
+                  </div>
 
-                    <div className="chooseCar chooseCar2">
+                  <div className="chooseCar chooseCar2">
                     <input type="checkbox" />
                     <div className="flex ">
-                        <div className="pr-3 pt-9">
+                      <div className="pr-3 pt-9">
                         <h2 className="text-xs text-left py-0">MPV</h2>
                         <p>8 passengers max</p>
                         </div>
                         <img src={SuvImg} width={130} height={130} alt="suv" />
-                    </div>
-                    </div>
+                      </div>
+                  </div>
                 </div>
             </>
 
@@ -188,13 +188,7 @@ function Booking() {
               ></textarea>
               <p className="bookTerms flex">
                 
-                <img
-                  src={Blacktick}
-                  width={15}
-                  height={15}
-                  className="mr-1"
-                  alt="tick"
-                />
+                <input type="checkbox" name="checkbox" className="mr-2"/>
                 By submitting a request, you agree to our
                 <Link to="/Terms" className="px-1 font-bold underline">
                 

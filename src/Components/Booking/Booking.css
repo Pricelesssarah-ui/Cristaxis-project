@@ -10,7 +10,8 @@
     font-size: 40px;
     font-weight: 700;
     text-align: center;
-    padding-block: 2rem;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
 }
 
 .formcontainer {
@@ -36,7 +37,7 @@
   }
 
   .input-with-image input {
-    padding-right: 20rem; 
+    padding-right: 10rem; 
   }
 
   .input-with-image img {
@@ -56,6 +57,7 @@
   .chooseCar {
     padding: 1rem 1.5rem;
     background: rgba(246, 246, 246, 1);
+    width: 100%;
   }
 
   .chooseCar2 {
@@ -66,9 +68,9 @@
     font-size: 8px;
   }
   
-.bookTerms {
+  .bookTerms {
     font-size: 10px;
-}
+  }
 
   .bookingSubmit {
     padding-block: 0.5rem;
@@ -94,15 +96,25 @@
         font-size: 80px;
         width: 90%;
         line-height: 1.2;
-        padding-block: 4rem;
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+    }
+
+    .input-with-image input {
+      padding-right: 20rem; 
     }
 
     .carContainer {
         flex-direction: row;
     }
 
+    .chooseCar {
+      width: 100rem;
+    }
+
     .chooseCar2 {
         margin-top: 0;
+        margin-left: 5rem;
       }
     
 

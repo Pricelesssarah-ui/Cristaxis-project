@@ -1,5 +1,5 @@
 .containerHome {
-  width: 90vw;
+  width: 100vw;
   overflow-x: hidden;
   margin-inline: 0;
   padding-inline: 0;
@@ -24,7 +24,8 @@
 }
 
 .textWrapper {
-  padding-block: 0;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
   padding-inline: 2rem;
 }
 
@@ -66,7 +67,7 @@
   height: 25px;
   position: fixed;
   left: 90%;
-  bottom: 0;
+  bottom: 10%;
 }
 
 .servicesContainer {
@@ -87,14 +88,14 @@ h2 {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  margin: 10px;
+  margin: 0 auto;
 }
 
 .serviceBox {
-  width: 100%;
+  width: 80%;
   height: 80%;
   background: white;
-  margin: 20px;
+  margin-block: 20px;
   padding: 20px;
   border-radius: 15px;
 }
@@ -170,7 +171,6 @@ h2 {
 .allBoxTestimonial {
   display: grid;
   grid-template-columns: 1fr;
-  margin-block: 20px;
 }
 
 .testimonialimage {
@@ -196,6 +196,7 @@ h2 {
   padding-bottom: 2rem;
   margin: 0 auto;
   font-size: 15px;
+  width: 80%;
 }
 
 .specialbox {
@@ -363,7 +364,7 @@ h2 {
   .chaticon {
     width: 35px;
     height: 35px;
-    position: relative;
+    position: fixed;
     left: 90%;
   }
 

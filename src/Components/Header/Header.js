@@ -26,7 +26,7 @@ const Header = ({ nav, setNav }) => {
 
   return (
     <div
-      className="navbar opacity-100 w-full h-22 bg-black py-3
+      className="navbar opacity-100 w-full h-22 bg-black py-3 fixed z-10
             text-white"
     >
       <div className="container">
