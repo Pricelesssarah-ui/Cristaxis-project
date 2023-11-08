@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import "./Booking.css";
 
-import Blacktick from "../../assets/images/svgs/black_tick.svg";
 import SendImg from "../../assets/images/svgs/send_icon.svg";
 import MapIcon from "../../assets/images/svgs/map_icon.svg";
 import CarImg from "../../assets/images/pngs/car_img.png";
