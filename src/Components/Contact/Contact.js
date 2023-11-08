@@ -22,7 +22,7 @@ function Contact() {
           </div>
 
           <form
-            action="https://getform.io/f/6f961cbd-c9f1-4586-a737-315a7bbc233e"
+            action="https://getform.io/f/bc5e8392-e086-4a60-b40a-cc499b565542"
             method="POST"
             className="formcontainer flex flex-col"
           >
