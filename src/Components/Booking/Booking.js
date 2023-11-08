@@ -26,6 +26,7 @@ function Booking() {
               <p className="input-with-image">
                 <input
                   type="text"
+                  name="location"
                   className="bookinginputField py-4 px-10"
                   placeholder="Pickup Location (including postcode)"
                   required
@@ -43,6 +44,7 @@ function Booking() {
               <div className="input-with-image">
               <input
                 type="text"
+                name="destination"
                 className="bookinginputField py-4 px-10 my-3"
                 placeholder="Destination (including postcode)"
                 required
@@ -63,7 +65,7 @@ function Booking() {
               </label>
                 <div className="carContainer flex flex-col justify-between">
                   <div className="chooseCar">
-                    <input type="checkbox" />
+                    <input type="checkbox"  name="Car"/>
                     <div className="flex items-end">
                       <div className="pt-3">
                         <h2 className="text-sm text-left py-0">Car</h2>
@@ -74,7 +76,7 @@ function Booking() {
                   </div>
 
                   <div className="chooseCar chooseCar2">
-                    <input type="checkbox" />
+                    <input type="checkbox" name="suv"/>
                     <div className="flex ">
                       <div className="pt-9">
                         <h2 className="text-xs text-left py-0">MPV</h2>
@@ -92,12 +94,14 @@ function Booking() {
               </label>
               <input
                 type="text"
+                name="name"
                 className="bookinginputField py-3 px-7"
                 placeholder="First Name and Last Name"
                 required
               />
               <input
                 type="text"
+                name="number"
                 className="bookinginputField py-3 px-7 my-3"
                 placeholder="Phone Number:"
                 required
@@ -105,6 +109,7 @@ function Booking() {
 
               <input
                 type="text"
+                name="post code"
                 className="bookinginputField py-3 px-7"
                 placeholder="Post Code:"
                 required
@@ -112,6 +117,7 @@ function Booking() {
 
               <input
                 type="email"
+                name="email"
                 className="bookinginputField py-3 px-7 my-3"
                 placeholder="Email Address"
                 required
@@ -123,22 +129,16 @@ function Booking() {
                 Trip Schedule
               </label>
               <label className="text-xs">
-                <input type="checkbox" /> Same-day booking? Call 01285 339 045{" "}
+                <input type="checkbox" name="check" /> Same-day booking? Call 01285 339 045{" "}
               </label>
               <label className="flex font-bold text-xs mt-2">
-                {" "}
-                <img
-                  src={Blacktick}
-                  width={15}
-                  height={15}
-                  className="mr-1"
-                  alt="tick"
-                />{" "}
-                LATER{" "}
+              <input type="checkbox" name="check" className="mr-1"/> 
+                LATER
               </label>
               <div className="tripSchedule">
                 <input
                   type="text"
+                  name="year" 
                   className="bookinginputField tripInput py-3 px-3 my-3 w-[80%]"
                   placeholder="Year"
                   required
@@ -146,6 +146,7 @@ function Booking() {
 
                 <input
                   type="text"
+                  name="month" 
                   className="bookinginputField tripInput py-3 px-3 my-3 w-[80%]"
                   placeholder="Month"
                   required
@@ -153,6 +154,7 @@ function Booking() {
 
                 <input
                   type="text"
+                  name="day"
                   className="bookinginputField tripInput py-3 px-3 my-3 w-[80%]"
                   placeholder="Day"
                   required
@@ -160,6 +162,7 @@ function Booking() {
 
                 <input
                   type="text"
+                  name="hour" 
                   className="bookinginputField tripInput py-3 px-3 my-3 w-[80%]"
                   placeholder="Hour"
                   required
@@ -167,6 +170,7 @@ function Booking() {
 
                 <input
                   type="text"
+                  name="minute" 
                   className="bookinginputField tripInput py-3 px-3 my-3 w-[80%]"
                   placeholder="Minutes"
                   required
@@ -183,6 +187,7 @@ function Booking() {
               </p>
               <textarea
                 rows={6}
+                name="textarea" 
                 className="bookinginputField p-2 my-4"
                 placeholder="Type here"
               ></textarea>
@@ -191,7 +196,6 @@ function Booking() {
                 <input type="checkbox" name="checkbox" className="mr-2"/>
                 By submitting a request, you agree to our
                 <Link to="/Terms" className="px-1 font-bold underline">
-                
                   Terms and Conditions
                 </Link>
                 and
