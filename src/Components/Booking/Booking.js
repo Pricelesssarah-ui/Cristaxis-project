@@ -65,9 +65,9 @@ function Booking() {
                   <div className="chooseCar">
                     <input type="checkbox" />
                     <div className="flex items-end">
-                      <div className="pr-3 pt-3">
-                      <h2 className="text-sm text-left py-0">Car</h2>
-                      <p>4 passengers max</p>
+                      <div className="pt-3">
+                        <h2 className="text-sm text-left py-0">Car</h2>
+                        <p>4 passengers max</p>
                       </div>
                       <img src={CarImg} width={130} height={130} alt="car" />
                     </div>
@@ -76,7 +76,7 @@ function Booking() {
                   <div className="chooseCar chooseCar2">
                     <input type="checkbox" />
                     <div className="flex ">
-                      <div className="pr-3 pt-9">
+                      <div className="pt-9">
                         <h2 className="text-xs text-left py-0">MPV</h2>
                         <p>8 passengers max</p>
                         </div>
