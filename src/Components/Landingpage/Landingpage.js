@@ -277,7 +277,7 @@ function Landingpage() {
         <div className="taxiContainer">
           <div className="container">
             <div className="taxiMain">
-              <div className="taxiText">
+              <div className="taxiText blogTaxiText">
                 <h2>Let’s help you get there</h2>
                 <p>Book a taxi in few seconds to get started</p>
                 <button className="impactlearnmore">
