@@ -56,7 +56,10 @@ const Header = ({ nav, setNav }) => {
             </button>
             <button className="callUs rounded text-white">
               {" "}
-              <a href="tel:+4471285339045" className="hover:scale-100 duration-300">
+              <a
+                href="tel:+441285339045"
+                className="hover:scale-100 duration-300"
+              >
                 Tap to Call: +447 1285 339045
               </a>{" "}
             </button>
@@ -106,14 +109,13 @@ const Header = ({ nav, setNav }) => {
                 </button>
 
                 <button className="callUsSmall rounded text-white">
-                <a href="+4471285339045"
-                    onClick={() => setNav(!nav)}
-                    smooth
-                    duration={300}
+                  {" "}
+                  <a
+                    href="tel:+441285339045"
                     className="hover:scale-100 duration-300 text-sm"
                   >
-                    Tap to Call: +447 1285 339045
-                    </a>
+                Tap to Call: +447 1285 339045
+              </a>{" "}
                 </button>
               </ul>
             )}
