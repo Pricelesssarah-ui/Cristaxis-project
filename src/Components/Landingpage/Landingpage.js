@@ -46,7 +46,7 @@ function Landingpage() {
               </button>
 
               <button className="callUs rounded text-white">
-                <a href="+447 1285 339045"
+                <a href="+4471285339045"
                     smooth
                     duration={300}
                     className="hover:scale-100 duration-300"

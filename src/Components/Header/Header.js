@@ -106,7 +106,7 @@ const Header = ({ nav, setNav }) => {
                 </button>
 
                 <button className="callUsSmall rounded text-white">
-                <a href="+447 1285 339045"
+                <a href="+4471285339045"
                     onClick={() => setNav(!nav)}
                     smooth
                     duration={300}
