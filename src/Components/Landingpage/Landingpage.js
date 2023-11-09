@@ -49,9 +49,9 @@ function Landingpage() {
                 <a href="+447 1285 339045"
                     smooth
                     duration={300}
-                    className="hover:scale-100 duration-300 text-sm"
+                    className="hover:scale-100 duration-300"
                   >
-                    Tap to Call: +447 1285 339045
+                    Call: +447 1285 339045
                     </a>
               </button>
 
