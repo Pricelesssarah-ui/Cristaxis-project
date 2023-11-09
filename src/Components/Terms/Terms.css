@@ -1,43 +1,42 @@
 .termsContainer {
-    background: 
-    rgba(24, 24, 24, 1);
-
+  background: rgba(24, 24, 24, 1);
 }
 
 .termInner {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .termInner h1 {
-    font-size: 30px;
-    padding-block: 2rem;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 1);
+  font-size: 30px;
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
 }
 
 .termsText2 {
-    padding-block: 2rem;
-    color: rgba(186, 186, 186, 1);
+  padding-bottom: 2rem;
+  color: rgba(186, 186, 186, 1);
 }
 
-
+ol {
+  list-style-type: lower-latin;
+}
 
 @media (min-width: 1100px) {
-    .termInner h1 {
-        font-size: 70px;
-        padding-block: 4rem;
-    }
+  .termInner h1 {
+    padding-block: 4rem;
+  }
 
-    .termInner .termsText1 {
-        font-size: 20px;
-        line-height: 1;
-    }
+  .termInner .termsText1 {
+    font-size: 15px;
+    line-height: 1;
+  }
 
-    .termsText2 li {
-        font-size: 20px;
-    }
-    
+  .termsText2 li {
+    font-size: 20px;
+  }
 }

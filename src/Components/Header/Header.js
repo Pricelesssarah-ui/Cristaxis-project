@@ -39,7 +39,7 @@ const Header = ({ nav, setNav }) => {
             {links.map(({ id, link }) => (
               <li
                 key={id}
-                className="px-3 cursor-pointer font-medium text-sm text-white 
+                className="navitem px-3 cursor-pointer font-medium text-white 
                      hover:scale-125 duration-300"
               >
                 <Link to={link} smooth duration={300}>

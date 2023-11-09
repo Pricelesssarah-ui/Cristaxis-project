@@ -104,6 +104,7 @@
   .aboutImages {
     flex-direction: row;
     padding-bottom: 2rem;
+    object-fit: cover;
   }
 
   .aboutImages img {
@@ -115,6 +116,12 @@
   .aboutImg1,
   .aboutImg3 {
     margin-top: 10rem;
+    object-fit: contain;
+  }
+
+  .aboutImg2,
+  .aboutImg4 {
+    object-fit: contain;
   }
 
   .aboutTaxiContainer {

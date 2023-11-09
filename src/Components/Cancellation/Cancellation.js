@@ -8,7 +8,7 @@ function Cancellation() {
       <div className="container">
         <div className="CancellationInner">
           <h1>Cancellation and Refunds Policy</h1>
-          <p className="CancellationText1 text-justify text-sm text-white">
+          <p className="CancellationText1 text-justify text-white">
             This Cancellation and Refund Policy ("Policy") outlines the terms
             and conditions for cancellations and refunds associated with
             bookings made with Cris taxis Cirencester ("Company," "we," "us," or
@@ -18,10 +18,9 @@ function Cancellation() {
           </p>
 
           <div>
+            <p className="text-white text-xl mt-9">1. General Policy:</p>
             <ol className=" CancellationText2 text-justify">
-              <li className="text-white text-lg mt-9">1. General Policy:</li>
               <li>
-                {" "}
                 In the event of a booking being cancelled, for which a deposit
                 or prepayment has been made, we reserve the right to retain such
                 payments and refunds may be made at the discretion of the
@@ -57,7 +56,10 @@ function Cancellation() {
                 In cases where a partial refund is granted, the refund amount
                 will be adjusted accordingly.
               </li>
-              <li className="text-white text-lg mt-9">2. Airport transfers:</li>
+            </ol>
+
+            <p className="text-white text-xl">2. Airport transfers:</p>
+            <ol className=" CancellationText2 text-justify">
               <li>
                 We do not carry unaccompanied packages or parcels from airports.
               </li>
@@ -93,11 +95,11 @@ function Cancellation() {
                 is diverted to another UK airport, however you may be able to
                 claim this from your travel insurance.
               </li>
-              <li className="text-white text-lg mt-9">
-                3.&nbsp;&nbsp;Event hire
-              </li>
+            </ol>
+
+            <p className="text-white text-xl">3. Event hire</p>
+            <ol className=" CancellationText2 text-justify">
               <li>
-                {" "}
                 All hires will start and end at the contracted times. Extensions
                 on the day of event can be arranged, subject to availability and
                 additional charges.
@@ -123,10 +125,13 @@ function Cancellation() {
                 reason other than a vehicle or driver being present, our no-show
                 policy applies.
               </li>
-              <li className="text-white text-lg mt-9">4. No-Show Policy: </li>
+            </ol>
+
+            <p className="text-white text-xl">4. No-Show Policy: </p>
+            <ol className=" CancellationText2 text-justify">
               <li>
                 If you fail to show up for a booked service without prior notice
-                or cancelation, you may be considered a &#34;no-show.&#34;
+                or cancelation, you may be considered a "no-show".;
               </li>
               <li>
                 Failure to emerge at the booked time may be considered a
@@ -136,9 +141,10 @@ function Cancellation() {
                 No-shows are typically subject to the cancellation policy of the
                 booking, and you may not be eligible for a refund.
               </li>
-              <li className="text-white text-lg mt-9">
-                5. Modification Policy:
-              </li>
+            </ol>
+
+            <p className="text-white text-xl">5. Modification Policy:</p>
+            <ol className=" CancellationText2 text-justify">
               <li>
                 If you wish to modify a booking, please contact us as soon as
                 possible. Modification requests are subject to availability and
@@ -152,24 +158,30 @@ function Cancellation() {
                 Where a booking has been modified to change the time, the new
                 time becomes binding and subject to the no-show policy.
               </li>
-              <li className="text-white text-lg mt-9">6. Force Majeure:</li>
+            </ol>
+
+            <p className="text-white text-xl">6. Force Majeure:</p>
+            <ol className=" CancellationText2 text-justify">
               <li>
                 In cases of force majeure, including but not limited to natural
                 disasters, government actions, and unforeseen circumstances
                 beyond our control, we reserve the right to modify, reschedule,
                 or cancel bookings without liability.
               </li>
-              <li className="text-white text-lg mt-9"> 7. Communication:</li>
+            </ol>
+
+            <p className="text-white text-xl"> 7. Communication:</p>
+            <ol className=" CancellationText2 text-justify">
               <li>
                 All cancellation, modification, and refund requests should be
                 communicated through the provided communication channels, which
                 may include contacting us via phone, email or using the website
                 contact form.
               </li>
-              <li className="text-white text-lg mt-9">
-                {" "}
-                8. Forgotten property{" "}
-              </li>
+            </ol>
+
+            <p className="text-white text-xl">8. Forgotten property</p>
+            <ol className=" CancellationText2 text-justify">
               <li>
                 If a passenger leaves something in a vehicle and we have contact
                 details for the passenger, he/she will be notified.
@@ -183,25 +195,25 @@ function Cancellation() {
                 If the owner of any item found is not immediately known or
                 contactable, it will be taken it to a local Police Station.
               </li>
-              <li className="text-white text-lg mt-9">
-                {" "}
-                9. Changes to the Policy:
-              </li>
+            </ol>
+
+            <p className="text-white text-xl">9. Changes to the Policy:</p>
+            <ol className=" CancellationText2 text-justify">
               <li>
                 We reserve the right to update or modify this Policy at any time
                 without prior notice. Any changes will be effective upon posting
                 on our platform. It is your responsibility to review this Policy
                 periodically for updates.
               </li>
-
-              <p className="text-white text-md mt-9">
-                By making a booking with us, you acknowledge that you have read
-                and understood this Cancellation and Refund Policy. If you do
-                not agree with this Policy, please refrain from using our
-                services. If you have any questions or require clarification
-                regarding this Policy, please contact us.
-              </p>
             </ol>
+
+            <p className="text-white text-md mt-5 mb-9">
+              By making a booking with us, you acknowledge that you have read
+              and understood this Cancellation and Refund Policy. If you do not
+              agree with this Policy, please refrain from using our services. If
+              you have any questions or require clarification regarding this
+              Policy, please contact us.
+            </p>
           </div>
         </div>
       </div>

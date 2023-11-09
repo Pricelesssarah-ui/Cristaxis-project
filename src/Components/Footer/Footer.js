@@ -12,6 +12,7 @@ import Visa from "../../assets/images/svgs/visa_icon.svg";
 import Card from "../../assets/images/svgs/card_icon.svg";
 import Paypal from "../../assets/images/svgs/paypal_icon.svg";
 import BDesigner from "../../assets/images/svgs/BDesigner_logo.svg";
+import { Link } from 'react-router-dom';
 
 
 
@@ -59,11 +60,11 @@ function Footer() {
             <div className="footerFourth">
               <ul>
                 <li className="special">Company</li>
-                <li className="aboutus">About Us</li>
-                <li>Services</li>
-                <li>Blog</li>
-                <li>Contact Us</li>
-                <li>Book a taxi</li>
+                <li className="aboutus"><Link to="/about">About us</Link></li>
+                <li> <Link to="/">Services</Link></li>
+                <li> <Link to="/blog">Blog</Link>Blog</li>
+                <li> <Link to="/contact">Contact Us</Link></li>
+                <li> <Link to="/booking">Book a taxi</Link></li>
               </ul>
             </div>
 
@@ -74,8 +75,8 @@ function Footer() {
                 <img src={Card} width={50} alt="card" />
               </div>
               <img src={Paypal} width={100} alt="paypal" />
-              <p className="cancel">Terms & Conditions</p>
-              <p className="cancel">Cancellation and Refunds Policy</p>
+              <p className="cancel"> <Link to="/terms">Terms & Conditions</Link></p>
+              <p className="cancel"> <Link to="/cancellation">Cancellation and Refunds Policy</Link></p>
             </div>
           </div>
 
