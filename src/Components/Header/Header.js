@@ -35,11 +35,11 @@ const Header = ({ nav, setNav }) => {
             <img src={Logo} alt="logo" />
           </Link>
 
-          <ul className="Navlist hidden md:flex items-center justify-between w-[60%]">
+          <ul className="Navlist lg:flex hidden items-center justify-between w-[100%]">
             {links.map(({ id, link }) => (
               <li
                 key={id}
-                className="px-3 cursor-pointer font-medium text-white 
+                className="px-3 cursor-pointer font-medium text-sm text-white 
                      hover:scale-125 duration-300"
               >
                 <Link to={link} smooth duration={300}>
@@ -54,26 +54,26 @@ const Header = ({ nav, setNav }) => {
                 BOOK A TAXI
               </Link>{" "}
             </button>
-            <button className="callUs rounded text-black">
+            <button className="callUs rounded text-white">
               {" "}
-              <Link to="/" className="hover:scale-100 duration-300">
-                CALL US
-                </Link>{" "}
+              <a href="tel:+4471285339045" className="hover:scale-100 duration-300">
+                Tap to Call: +447 1285 339045
+              </a>{" "}
             </button>
           </ul>
 
-          <div className=" z-10">
+          <div className="">
             <div
               onClick={() => setNav(!nav)}
-              className="cursor-pointer  
-                  text-gray-500  md:hidden mr-5"
+              className="cursor-pointer
+                  text-gray-500 lg:hidden mr-5"
             >
               {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
             </div>
 
             {nav && (
               <ul
-                className="flex flex-col justify-center items-center absolute
+                className="flex flex-col justify-center items-center absolute 
                      top-0 left-0 w-full h-screen b-screen bg-black text-white"
               >
                 {links.map(({ id, link }) => (
@@ -93,9 +93,9 @@ const Header = ({ nav, setNav }) => {
                   </li>
                 ))}
 
-                <button className="bookAtaxi rounded text-black my-6 mx-0 ">
+                <button className="rounded text-black my-6 mx-0 ">
                   <Link
-                    to="/contact"
+                    to="/booking"
                     onClick={() => setNav(!nav)}
                     smooth
                     duration={300}
@@ -105,16 +105,15 @@ const Header = ({ nav, setNav }) => {
                   </Link>
                 </button>
 
-                <button className="callUs rounded text-black">
-                <Link
-                    to="/"
+                <button className="rounded text-black">
+                <a href="+447 1285 339045"
                     onClick={() => setNav(!nav)}
                     smooth
                     duration={300}
                     className="hover:scale-100 duration-300 text-sm"
                   >
-                    Call us
-                    </Link>
+                    Tap to Call: +447 1285 339045
+                    </a>
                 </button>
               </ul>
             )}

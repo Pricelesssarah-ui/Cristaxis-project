@@ -59,48 +59,39 @@ function Landingpage() {
             <div className="allBoxService">
               <div className="serviceBox">
                 <h3>Airport Transfers</h3>
-                <p>We provide airport transfers to and from all UK airports.</p>
+                <p>we provide transfers to and from all UK airports and seaports. Please get 
+                  in touch for a quote or use the online booking form.</p>
               </div>
 
               <div className="serviceBox">
                 <h3>Corporate Travels</h3>
-                <p>
-                  We understand the pressures placed on executives and realise
-                  that their agendas frequently change at the last minute.
+                <p>We can provide corporate account services to businesses for a regular 
+                  transport of clients, employees or packages. Please get in touch to discuss your needs.
                 </p>
               </div>
 
               <div className="serviceBox">
                 <h3>Private Hire</h3>
                 <p>
-                  Whether it’s a short shopping trip or a long-distance journey,
-                  we will get you there in comfort.
+                  For short and long-distance journeys, let us get you there in comfort. 
+                  Please use our booking form to pre-book a journey.
                 </p>
               </div>
-
-              <div className="serviceBox">
-                <h3>Chauffeur Services</h3>
-                <p>
-                  From our base in Cirencester provide a first class taxi
-                  service.
-                </p>
-              </div>
-
-              <div className="serviceBox">
+              
+              <div className="serviceBox ">
                 <h3>MPV Hire</h3>
                 <p>
-                  We can easily cater for the travel needs of larger groups with
-                  our luxury minibus service. We have a range of suitable
-                  vehicles ranging from 6 seater MPV up to 8 seater MPV
+                  For short and long-distance journeys, let us get you there in comfort. 
+                  Please use our booking form to pre-book a journey.
                 </p>
               </div>
 
               <div className="serviceBox">
                 <h3>Event Hire</h3>
                 <p>
-                  Assurance, capability, high standards and courtesy are the
-                  building blocks of our brand and we guarantee a five-star taxi
-                  service for all our clients.
+                  our event hire service caters to the needs of hosts who want taxis to shuttle 
+                  their guests to or from private or corporate events. Vehicles and drivers are hired at an 
+                  hourly rate and will remain on site when they are not transporting guests.
                 </p>
               </div>
             </div>
@@ -153,12 +144,10 @@ function Landingpage() {
                 </div>
                 <div className="testimonialBox">
                   <p className="testimony">
-                    They provided with the best in class vehicle and amazing
-                    driver to pick me from the airport. I liked their
-                    punctuality and professionalism
+                    I can’t recommend Cris taxi’s enough!! Always on time, waiting with a smile, friendly conversation 
+                    and gets you were you want to be smoothly and safely if I could give 6 stars I would.
                   </p>
-                  <p className="thename">Billionaire Designer</p>
-                  <p className="occupation">Manager, XYZ Brands</p>
+                  <p className="thename pt-6">Paloma</p>
                 </div>
               </div>
 
@@ -168,12 +157,9 @@ function Landingpage() {
                 </div>
                 <div className="testimonialBox specialbox">
                   <p className="testimony">
-                    They provided with the best in class vehicle and amazing
-                    driver to pick me from the airport. I liked their
-                    punctuality and professionalism
+                    Excellent and professional service. Would highly recommend
                   </p>
-                  <p className="thename">Billionaire Designer</p>
-                  <p className="occupation">Manager, XYZ Brands</p>
+                  <p className="thename mt-10 pt-10">Ciprian</p>
                 </div>
               </div>
 
@@ -183,12 +169,9 @@ function Landingpage() {
                 </div>
                 <div className="testimonialBox">
                   <p className="testimony">
-                    They provided with the best in class vehicle and amazing
-                    driver to pick me from the airport. I liked their
-                    punctuality and professionalism
+                  Cris Taxi was a delight and the service was perfect. I highly recommend.
                   </p>
-                  <p className="thename">Billionaire Designer</p>
-                  <p className="occupation">Manager, XYZ Brands</p>
+                  <p className="thename mt-10 pt-10">James</p>
                 </div>
               </div>
             </div>

@@ -100,7 +100,7 @@
     }
 
     .input-with-image input {
-      padding-right: 17rem; 
+      padding-right: 17.3rem; 
     }
 
     .carContainer {
@@ -118,7 +118,8 @@
       }
 
     .tripInput {
-        padding-inline: 2rem;
+        border: 1px solid rgba(186, 186, 186, 1);
+        padding-inline: 1rem;
     }
 
     .bookingSubmit {

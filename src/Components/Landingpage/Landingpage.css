@@ -45,14 +45,14 @@
 .bookAtaxi {
   background: #ffcc00;
   margin-right: 10px;
-  font-weight: 600;
+  font-weight: 700;
   padding: 5px;
   border-radius: 5px;
   font-size: 12px;
 }
 
 .learnMore {
-  font-weight: 600;
+  font-weight: 700;
   padding: 5px;
   border: 1px solid #ffcc00;
   border-radius: 5px;
@@ -83,21 +83,24 @@ h2 {
   font-weight: 700;
 }
 
-.allBoxService,
-.allBoxImpact {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  margin: 0 auto;
+.allBoxService {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .serviceBox {
   width: 80%;
-  height: 80%;
+  height: 150px;
   background: white;
   margin-block: 20px;
   padding: 20px;
   border-radius: 15px;
+}
+
+.serviceDownbox {
+  display: block;
 }
 
 .serviceBox h3 {
@@ -122,6 +125,13 @@ h2 {
   font-size: 12px;
   font-weight: 600;
   padding-block: 20px;
+}
+
+.allBoxImpact {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 0 auto;
 }
 
 .impactBox {
@@ -197,6 +207,7 @@ h2 {
   margin: 0 auto;
   font-size: 15px;
   width: 80%;
+  height: 45vh;
 }
 
 .specialbox {
@@ -217,15 +228,8 @@ h2 {
 }
 
 .testimonialBox .thename {
-  padding-top: 20px;
   font-weight: 700;
   font-size: 18px;
-}
-
-.testimonialBox .occupation {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1;
 }
 
 .tipsContainer {
@@ -341,8 +345,8 @@ h2 {
   }
 
   .someText {
-    padding-block: 50px;
-    font-size: 40px;
+    padding-block: 40px;
+    font-size: 35px;
     width: 55%;
   }
 
@@ -369,7 +373,7 @@ h2 {
   }
 
   .servicesContainer {
-    padding-bottom: 50px;
+    padding-bottom: 4rem;
   }
 
   h2 {
@@ -377,21 +381,27 @@ h2 {
     padding-top: 70px;
   }
 
-  .allBoxService,
-  .allBoxImpact {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  .allBoxService {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
   }
 
   .serviceBox {
-    width: 80%;
-    height: 85%;
-    margin: 30px;
+    width: 300px;
+    height: 200px;
+    margin: 40px 20px;
   }
 
   .impactContainer {
     height: 90vh;
+  }
+
+  .allBoxImpact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
   }
 
   .impactContainer .impactText {
@@ -411,6 +421,10 @@ h2 {
   .impactlearnmore {
     width: 15%;
     font-size: 15px;
+  }
+
+  .testimonialContainer {
+    padding-bottom: 6rem;
   }
 
   .allBoxTestimonial {

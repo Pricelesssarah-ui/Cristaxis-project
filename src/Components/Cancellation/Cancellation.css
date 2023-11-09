@@ -1,7 +1,6 @@
 .CancellationContainer {
     background: 
     rgba(24, 24, 24, 1);
-
 }
 
 .CancellationInner {
@@ -13,7 +12,9 @@
 
 .CancellationInner h1 {
     font-size: 30px;
-    padding-block: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 6rem;
+    text-align: center;
     font-weight: 700;
     color: rgba(255, 255, 255, 1);
 }
@@ -28,11 +29,13 @@
 @media (min-width: 1100px) {
     .CancellationInner h1 {
         font-size: 70px;
-        padding-block: 4rem;
+        padding-bottom: 4rem;
+        padding-top: 7rem;
+        line-height: 1.2;
     }
 
     .CancellationInner .termsText1 {
-        font-size: 20px;
+        font-size: 30px;
         line-height: 1;
     }
 

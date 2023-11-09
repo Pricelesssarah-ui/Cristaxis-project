@@ -9,6 +9,11 @@ import CarImg from "../../assets/images/pngs/car_img.png";
 import SuvImg from "../../assets/images/pngs/suv_img.png";
 
 function Booking() {
+
+  const options = Array.from({ length: 31 }, (_, index) => index + 1);
+
+  const minutes = Array.from({ length: 60 }, (_, index) => index);
+
   return (
     <div className="bookingContainer">
       <div className="container">
@@ -22,12 +27,12 @@ function Booking() {
     
             <>
               <label className="font-bold text-xl pb-4">Route Details</label>
-              <p className="input-with-image">
+              <div className="input-with-image">
                 <input
                   type="text"
                   name="location"
-                  className="bookinginputField py-4 px-10"
-                  placeholder="Pickup Location (including postcode)"
+                  className="bookinginputField py-4 px-10 my-3"
+                  placeholder="Pickup Location:"
                   required
                 />
 
@@ -38,24 +43,40 @@ function Booking() {
                   className="sendImg"
                   alt="send"
                 />  
-              </p>
+              </div>
+
+              <input
+                  type="text"
+                  name="location"
+                  className="bookinginputField py-4 px-10"
+                  placeholder="Pickup Post Code:"
+                  required
+                />
 
               <div className="input-with-image">
-              <input
-                type="text"
-                name="destination"
-                className="bookinginputField py-4 px-10 my-3"
-                placeholder="Destination (including postcode)"
-                required
-              />
+                <input
+                  type="text"
+                  name="destination"
+                  className="bookinginputField py-4 px-10 my-3"
+                  placeholder="Destination:"
+                  required
+                />
 
-              <img 
-              src={MapIcon} 
-              width={20} 
-              height={20} 
-              className="mapicon"
-              alt="mapicon" />
+                <img 
+                src={MapIcon} 
+                width={20} 
+                height={20} 
+                className="mapicon"
+                alt="mapicon" />
               </div>
+
+              <input
+                  type="text"
+                  name="location"
+                  className="bookinginputField py-4 px-10"
+                  placeholder="Destination Post Code:"
+                  required
+                />
             </>
 
             <>
@@ -101,23 +122,15 @@ function Booking() {
               <input
                 type="text"
                 name="number"
-                className="bookinginputField py-3 px-7 my-3"
+                className="bookinginputField py-3 px-7 my-5"
                 placeholder="Phone Number:"
-                required
-              />
-
-              <input
-                type="text"
-                name="post code"
-                className="bookinginputField py-3 px-7"
-                placeholder="Post Code:"
                 required
               />
 
               <input
                 type="email"
                 name="email"
-                className="bookinginputField py-3 px-7 my-3"
+                className="bookinginputField py-3 px-7 "
                 placeholder="Email Address"
                 required
               />
@@ -138,12 +151,76 @@ function Booking() {
                 <input
                   type="text"
                   name="year" 
-                  className="bookinginputField tripInput py-3 px-3 my-3 w-[80%]"
+                  className="bookinginputField tripInput py-3 font-bold px-3 my-3 w-[80%]"
                   placeholder="Year"
                   required
                 />
 
-                <input
+                <select name="month" className="bookinginputField tripInput py-3 px-3 my-3 mx-0 w-[80%]">
+                  <option value="month">Month</option>
+                  <option value="January">January</option>
+                  <option value="February">February</option>
+                  <option value="March">March</option>
+                  <option value="April">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="August">August</option>
+                  <option value="September">September</option>
+                  <option value="October">October</option>
+                  <option value="November">November</option>
+                  <option value="December">December</option>
+                </select>
+
+                <select
+                  name="month"
+                  className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
+                >
+                  <option value="Day">Day</option>
+                  {options.map((value) => (
+                    <option key={value} value={value}>
+                      {value}
+                    </option>
+                  ))}
+                </select>
+
+                <select name="hour" className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]">
+                  <option value="Hour">Hour</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+
+
+                <select
+                  name="minutes"
+                  className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
+                  >
+                  <option value="minutes">Minutes</option>
+                  {minutes.map((minute) => (
+                    <option key={minute} value={minute}>
+                      {minute < 10 ? `0${minute}` : minute}
+                    </option>
+                  ))}
+                </select>
+                
+                <select name="time" className="bookinginputField tripInput py-3 my-3 mx-0 w-[60%]">
+                  <option value="AM">AM</option>
+                  <option value="PM">PM</option>
+                </select>
+
+
+
+                {/* <input
                   type="text"
                   name="month" 
                   className="bookinginputField tripInput py-3 px-3 my-3 w-[80%]"
@@ -173,7 +250,7 @@ function Booking() {
                   className="bookinginputField tripInput py-3 px-3 my-3 w-[80%]"
                   placeholder="Minutes"
                   required
-                />
+                /> */}
               </div>
             </>
 
