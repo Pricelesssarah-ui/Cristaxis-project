@@ -17,7 +17,7 @@ function Contact() {
             <h1>Talk to Us</h1>
             <p>
               Complete the form below or email{" "}
-              <a href="/">hello@cristaxi.com</a>
+              <a href="/">info@cristaxi.com</a>
             </p>
           </div>
 

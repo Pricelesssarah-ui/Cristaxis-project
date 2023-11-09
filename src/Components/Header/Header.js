@@ -62,25 +62,25 @@ const Header = ({ nav, setNav }) => {
             </button>
           </ul>
 
-          <div className="">
+          <div className="z-10">
             <div
               onClick={() => setNav(!nav)}
               className="cursor-pointer
-                  text-gray-500 lg:hidden mr-5"
+              text-gray-500 lg:hidden mr-5 z-10"
             >
               {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
             </div>
 
             {nav && (
               <ul
-                className="flex flex-col justify-center items-center absolute 
+                className="flex flex-col justify-center items-center absolute
                      top-0 left-0 w-full h-screen b-screen bg-black text-white"
               >
                 {links.map(({ id, link }) => (
                   <li
                     key={id}
                     className="px-4 cursor-pointer 
-                            capitalize py-6 text-2xl"
+                        capitalize py-6 text-2xl"
                   >
                     <Link
                       onClick={() => setNav(!nav)}
@@ -93,7 +93,7 @@ const Header = ({ nav, setNav }) => {
                   </li>
                 ))}
 
-                <button className="rounded text-black my-6 mx-0 ">
+                <button className="bookAtaxiSmall rounded text-black my-6 mx-0">
                   <Link
                     to="/booking"
                     onClick={() => setNav(!nav)}
@@ -105,7 +105,7 @@ const Header = ({ nav, setNav }) => {
                   </Link>
                 </button>
 
-                <button className="rounded text-black">
+                <button className="callUsSmall rounded text-white">
                 <a href="+447 1285 339045"
                     onClick={() => setNav(!nav)}
                     smooth

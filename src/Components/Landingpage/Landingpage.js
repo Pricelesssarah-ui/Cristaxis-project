@@ -44,11 +44,20 @@ function Landingpage() {
                 {" "}
                 <Link to="/booking">BOOK A TAXI</Link>
               </button>
-              <button className="learnMore">
-                {" "}
-                <Link to="/about">LEARN MORE</Link>
+
+              <button className="callUs rounded text-white">
+                <a href="+447 1285 339045"
+                    smooth
+                    duration={300}
+                    className="hover:scale-100 duration-300 text-sm"
+                  >
+                    Tap to Call: +447 1285 339045
+                    </a>
               </button>
-              <img src={ChatIcon} alt="chat" className="chaticon" />
+
+              <Link to="/contact us">
+                <img src={ChatIcon} alt="chat" className="chaticon" />
+              </Link>
             </div>
           </div>
         </div>
