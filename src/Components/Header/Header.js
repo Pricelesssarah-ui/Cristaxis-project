@@ -60,7 +60,7 @@ const Header = ({ nav, setNav }) => {
                 href="tel:+441285339045"
                 className="hover:scale-100 duration-300"
               >
-                Tap to Call: +447 1285 339045
+                Tap to Call: +4412 8533 9045
               </a>{" "}
             </button>
           </ul>
@@ -114,7 +114,7 @@ const Header = ({ nav, setNav }) => {
                     href="tel:+441285339045"
                     className="hover:scale-100 duration-300 text-sm"
                   >
-                Tap to Call: +447 1285 339045
+                Tap to Call: +4412 8533 9045
               </a>{" "}
                 </button>
               </ul>

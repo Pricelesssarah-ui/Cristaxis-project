@@ -51,10 +51,14 @@
 .blogtaxiText h1 {
   font-weight: 700;
   font-size: 30px;
+  text-align: center;
+  padding-inline: 10px;
 }
 
 .taxiText p {
   font-size: 15px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .blogtaxiText .impactlearnmore {
@@ -104,12 +108,16 @@
     font-weight: 700;
     font-size: 60px;
     line-height: 1;
+    text-align: left;
     width: 90%;
+    padding-inline: 0;
   }
 
   .blogtaxiText p {
     font-size: 35px;
     padding-block: 20px;
+    text-align: left;
+    padding-inline: 0;
   }
 
   .blogtaxiText .impactlearnmore {

@@ -51,7 +51,7 @@ function Landingpage() {
                   href="tel:+441285339045"
                   className="hover:scale-100 duration-300"
                 >
-                  Call: +447 1285 339045
+                  Call: +4412 8533 9045
                 </a>{" "}
               </button>
 
