@@ -1,9 +1,10 @@
 import React from "react";
 import "./Contact.css";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+
 
 function Contact() {
+
   return (
     <motion.div
       name="contact"
@@ -17,13 +18,13 @@ function Contact() {
             <h1>Talk to Us</h1>
             <p>
               Complete the form below or email{" "}
-              <a href="/">info@cristaxi.com</a>
+              <a href="/">hello@cristaxi.com</a>
             </p>
           </div>
 
           <form
-            action="https://getform.io/f/73bbb62f-1b6b-46de-8a51-1e5997156625"
-            method="POST"
+           action="https://getform.io/f/6ac1cc47-138f-48b0-bd68-f2b5248e9880"
+           method="POST"
             className="formcontainer flex flex-col"
           >
             <input
@@ -33,40 +34,39 @@ function Contact() {
               placeholder="Name:"
               required
             />
+       
             <input
               type="text"
               name="phoneNumber"
               className="inputField py-3 px-2 my-3"
               placeholder="Phone Number:"
-              required
+             required
             />
+           
             <input
               type="email"
               name="email"
               className="inputField py-3 px-2"
               placeholder="Email Address:"
-              required
+             required
             />
+          
             <input
               type="text"
               name="companyName"
               className="inputField py-3 px-2 my-3"
               placeholder="Company Name:"
-              required
             />
-
+ 
             <textarea
               rows={8}
               name="textarea"
-              className="inputField p-2 "
+              className="inputField p-2"
               placeholder="Type Message Here"
-            ></textarea>
-
-
+            />
+        
             <button type="submit" className="contactSubmit">
-              <Link to='/SuccessContactpage'>
-                SEND MESSAGE
-              </Link>
+              SEND MESSAGE
             </button>
           </form>
         </div>
