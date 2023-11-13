@@ -31,6 +31,7 @@ function Booking() {
                   type="text"
                   name="location"
                   className="bookinginputField py-4 px-10 my-3"
+    	            placeholder="Pickup location:"
                   required
                 />
 
@@ -47,6 +48,8 @@ function Booking() {
                 type="text"
                 name="pickupPostCode"
                 className="bookinginputField py-4 px-10"
+                placeholder="Pickup Post Code:"
+                required
               />
 
               <div className="input-with-image">
@@ -54,6 +57,7 @@ function Booking() {
                   type="text"
                   name="destination"
                   className="bookinginputField py-4 px-10 my-3"
+                  placeholder="Destination:"
                   required
                 />
 
@@ -70,6 +74,7 @@ function Booking() {
                 type="text"
                 name="destinationPostCode"
                 className="bookinginputField py-4 px-10"
+                placeholder="Destination Post Code:"
                 required
               />
             </>
@@ -116,7 +121,7 @@ function Booking() {
                 type="text"
                 name="name"
                 className="bookinginputField py-3 px-7"
-                placeholder="First Name and Last Name"
+                placeholder="First Name and Last Name:"
                 required
               />
 
@@ -132,7 +137,7 @@ function Booking() {
                 type="email"
                 name="email"
                 className="bookinginputField py-3 px-7"
-                placeholder="Email Address"
+                placeholder="Email Address:"
                 required
               />
             </>
