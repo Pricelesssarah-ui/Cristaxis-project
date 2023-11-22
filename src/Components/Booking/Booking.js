@@ -30,7 +30,7 @@ function Booking() {
                 <input
                   type="text"
                   name="location"
-                  className="bookinginputField py-4 px-10 my-3"
+                  className="bookinginputField inputSpecial py-4 px-10 my-3"
     	            placeholder="Pickup location:"
                   required
                 />
@@ -47,7 +47,7 @@ function Booking() {
               <input
                 type="text"
                 name="pickupPostCode"
-                className="bookinginputField py-4 px-10"
+                className="bookinginputField inputSpecial py-4 px-10"
                 placeholder="Pickup Post Code:"
                 required
               />
@@ -56,7 +56,7 @@ function Booking() {
                 <input
                   type="text"
                   name="destination"
-                  className="bookinginputField py-4 px-10 my-3"
+                  className="bookinginputField inputSpecial py-4 px-10 my-3"
                   placeholder="Destination:"
                   required
                 />
@@ -73,7 +73,7 @@ function Booking() {
               <input
                 type="text"
                 name="destinationPostCode"
-                className="bookinginputField py-4 px-10"
+                className="bookinginputField inputSpecial py-4 px-10"
                 placeholder="Destination Post Code:"
                 required
               />
@@ -85,8 +85,8 @@ function Booking() {
               <div className="carContainer flex flex-col justify-between">
                 <div className="chooseCar">
                   <input
-                    type="checkbox"
-                    name="car"
+                    type="radio"
+                    name="vehicle"
                   />
                   <div className="flex items-end">
                     <div className="pt-3">
@@ -99,8 +99,8 @@ function Booking() {
 
                 <div className="chooseCar chooseCar2">
                   <input
-                    type="checkbox"
-                    name="suv"
+                    type="radio"
+                    name="vehicle"
                   />
                   <div className="flex ">
                     <div className="pt-9">
@@ -146,11 +146,11 @@ function Booking() {
                 Trip Schedule
               </label>
               <label className="text-xs">
-                <input type="checkbox" name="check" /> Same-day booking? Call
+                <input type="radio" name="check" /> Same-day booking? Call
                 01285 339 045{" "}
               </label>
               <label className="flex font-bold text-xs mt-2">
-                <input type="checkbox" name="check" className="mr-1" />
+                <input type="radio" name="check" className="mr-1" />
                 LATER
               </label>
               <div className="tripSchedule">
@@ -164,6 +164,7 @@ function Booking() {
 
                 <select
                   name="month"
+                  required
                   className="bookinginputField tripInput py-3 px-3 my-3 mx-0 w-[80%]"
                 >
                   <option value="month">Month</option>
@@ -182,7 +183,8 @@ function Booking() {
                 </select>
 
                 <select
-                  name="month"
+                  name="day"
+                  required
                   className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
                 >
                   <option value="Day">Day</option>
@@ -195,6 +197,7 @@ function Booking() {
 
                 <select
                   name="hour"
+                  required
                   className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
                 >
                   <option value="Hour">Hour</option>
@@ -214,6 +217,7 @@ function Booking() {
 
                 <select
                   name="minutes"
+                  required
                   className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
                 >
                   <option value="minutes">Minutes</option>
@@ -226,6 +230,7 @@ function Booking() {
 
                 <select
                   name="time"
+                  required
                   className="bookinginputField tripInput py-3 my-3 mx-0 w-[60%]"
                 >
                   <option value="AM">AM</option>
@@ -253,6 +258,7 @@ function Booking() {
                     type="checkbox"
                     name="checkbox"
                     className="mr-2"
+                    required
                   />
                   By submitting a request, you agree to our
                   <Link to="/Terms" className="px-1 font-bold underline">

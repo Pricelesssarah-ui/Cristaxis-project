@@ -65,11 +65,10 @@ const Header = ({ nav, setNav }) => {
             </button>
           </ul>
 
-          <div className="z-10">
             <div
               onClick={() => setNav(!nav)}
-              className="cursor-pointer
-              text-gray-500 lg:hidden mr-5 z-10"
+              className="cursor-pointer z-10
+              text-gray-500 lg:hidden mr-5"
             >
               {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
             </div>
@@ -122,7 +121,6 @@ const Header = ({ nav, setNav }) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

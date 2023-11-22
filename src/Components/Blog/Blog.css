@@ -45,14 +45,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-block: 30px;
+  padding-block: 10px;
 }
 
 .blogtaxiText h1 {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
-  padding-inline: 10px;
+  padding-inline: 5px;
+}
+
+.blogtaxiText p {
+  font-size: 13px;
+  text-align: center;
 }
 
 .taxiText p {

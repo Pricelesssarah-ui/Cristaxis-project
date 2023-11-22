@@ -1,132 +1,125 @@
 .bookingItems {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .bookingItems h1 {
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    padding-top: 6rem;
-    padding-bottom: 2rem;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
 }
 
 .formcontainer {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  .bookinginputField {
-    outline: none;
-    border: none;
-    border-radius: 3px;
-    background: rgba(246, 246, 246, 1);
-  }
-  
-  .bookinginputField::placeholder {
-    font-size: 13px;
-    color: rgba(117, 117, 117, 1);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.bookinginputField {
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background: rgba(246, 246, 246, 1);
+}
+
+.inputSpecial {
+  width: 100%;
+}
+
+.bookinginputField::placeholder {
+  font-size: 13px;
+  color: rgba(117, 117, 117, 1);
+}
+
+.input-with-image {
+  position: relative;
+  display: inline-block;
+}
+
+.input-with-image img {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.tripSchedule {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.chooseCar {
+  padding: 1rem 1.5rem;
+  background: rgba(246, 246, 246, 1);
+}
+
+.chooseCar2 {
+  margin-top: 1rem;
+}
+
+.chooseCar p {
+  font-size: 8px;
+}
+
+.bookTerms {
+  font-size: 10px;
+}
+
+.bookingSubmit {
+  padding-block: 0.5rem;
+  width: 50%;
+  margin-block: 4rem;
+  border-radius: 3px;
+  font-weight: 700;
+  background: rgba(255, 204, 0, 1);
+}
+
+.contactText {
+  font-size: 12px;
+}
+
+@media (min-width: 1100px) {
+  .bookingItems {
+    width: 60%;
   }
 
-  .input-with-image {
-    position: relative;
-    display: inline-block;
+  .bookingItems h1 {
+    font-size: 80px;
+    width: 90%;
+    line-height: 1.2;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
   }
 
-  .input-with-image input {
-    padding-right: 10rem; 
-  }
-
-  .input-with-image img {
-    position: absolute;
-    top: 50%;
-    right: 30px; 
-    transform: translateY(-50%);
-    width: 20px; 
-    height: 20px; 
-  }
-
-  .tripSchedule {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .chooseCar {
-    padding: 1rem 1.5rem;
-    background: rgba(246, 246, 246, 1);
+  .carContainer {
+    flex-direction: row;
   }
 
   .chooseCar2 {
-    margin-top: 1rem;
+    margin-top: 0;
+    margin-left: 1rem;
   }
 
-  .chooseCar p{
-    font-size: 8px;
+  .tripSchedule {
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  
-  .bookTerms {
-    font-size: 10px;
+
+  .tripInput {
+    border: 1px solid rgba(186, 186, 186, 1);
+    padding-inline: 1rem;
   }
 
   .bookingSubmit {
-    padding-block: 0.5rem;
-    width: 50%;
-    margin-block: 4rem;
-    border-radius: 3px;
-    font-weight: 700;
-    background: rgba(255, 204, 0, 1);
+    width: 30%;
   }
 
   .contactText {
-    font-size: 12px;
+    font-size: 17px;
   }
-
-
-@media (min-width: 1100px) {
-
-    .bookingItems {
-        width: 60%;
-    } 
-
-    .bookingItems h1 {
-        font-size: 80px;
-        width: 90%;
-        line-height: 1.2;
-        padding-top: 8rem;
-        padding-bottom: 4rem;
-    }
-
-    .input-with-image input {
-      padding-right: 17.3rem; 
-    }
-
-    .carContainer {
-        flex-direction: row;
-    }
-
-    .chooseCar2 {
-        margin-top: 0;
-        margin-left: 1rem;
-      }
-    
-
-    .tripSchedule {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-
-    .tripInput {
-        border: 1px solid rgba(186, 186, 186, 1);
-        padding-inline: 1rem;
-    }
-
-    .bookingSubmit {
-        width: 30%;
-      }
-    
-      .contactText {
-        font-size: 17px;
-      }
 }

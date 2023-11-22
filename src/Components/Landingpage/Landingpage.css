@@ -494,7 +494,8 @@ h2 {
   }
 
   .taxiText p {
-    font-size: 35px;
+    font-size: 35px !important;
+    text-align: left !important;
     padding-block: 20px;
   }
 
