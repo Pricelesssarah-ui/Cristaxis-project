@@ -164,8 +164,8 @@ function Booking() {
 
                 <select
                   name="month"
-                  required
                   className="bookinginputField tripInput py-3 px-3 my-3 mx-0 w-[80%]"
+                  required
                 >
                   <option value="month">Month</option>
                   <option value="January">January</option>
@@ -184,8 +184,8 @@ function Booking() {
 
                 <select
                   name="day"
-                  required
                   className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
+                  required
                 >
                   <option value="Day">Day</option>
                   {options.map((value) => (
@@ -197,8 +197,8 @@ function Booking() {
 
                 <select
                   name="hour"
-                  required
                   className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
+                  required
                 >
                   <option value="Hour">Hour</option>
                   <option value="1">1</option>
@@ -217,8 +217,8 @@ function Booking() {
 
                 <select
                   name="minutes"
-                  required
                   className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
+                  required
                 >
                   <option value="minutes">Minutes</option>
                   {minutes.map((minute) => (
@@ -230,8 +230,8 @@ function Booking() {
 
                 <select
                   name="time"
-                  required
                   className="bookinginputField tripInput py-3 my-3 mx-0 w-[60%]"
+                  required
                 >
                   <option value="AM">AM</option>
                   <option value="PM">PM</option>
