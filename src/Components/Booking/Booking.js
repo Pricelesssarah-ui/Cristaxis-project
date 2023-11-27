@@ -12,7 +12,6 @@ function Booking() {
   const options = Array.from({ length: 31 }, (_, index) => index + 1);
   const minutes = Array.from({ length: 60 }, (_, index) => index);
 
-
   return (
     <div className="bookingContainer">
       <div className="container">
@@ -29,9 +28,9 @@ function Booking() {
               <div className="input-with-image">
                 <input
                   type="text"
-                  name="location"
+                  name="PickupLocation"
                   className="bookinginputField inputSpecial py-4 px-10 my-3"
-    	            placeholder="Pickup location:"
+                  placeholder="Pickup location:"
                   required
                 />
 
@@ -84,28 +83,26 @@ function Booking() {
               </label>
               <div className="carContainer flex flex-col justify-between">
                 <div className="chooseCar">
-                  <input
-                    type="radio"
-                    name="vehicle"
-                  />
+                  <input type="radio" name="car" id="carOption" />
                   <div className="flex items-end">
                     <div className="pt-3">
-                      <h2 className="text-sm text-left py-0">Car</h2>
-                      <p>4 passengers max</p>
+                      <label htmlFor="carOption">
+                        <h2 className="text-sm text-left py-0">Car</h2>
+                        <p>4 passengers max</p>
+                      </label>
                     </div>
                     <img src={CarImg} width={130} height={130} alt="car" />
                   </div>
                 </div>
 
                 <div className="chooseCar chooseCar2">
-                  <input
-                    type="radio"
-                    name="vehicle"
-                  />
-                  <div className="flex ">
+                  <input type="radio" name="car" id="mpvOption" />
+                  <div className="flex">
                     <div className="pt-9">
-                      <h2 className="text-xs text-left py-0">MPV</h2>
-                      <p>8 passengers max</p>
+                      <label htmlFor="mpvOption">
+                        <h2 className="text-xs text-left py-0">MPV</h2>
+                        <p>8 passengers max</p>
+                      </label>
                     </div>
                     <img src={SuvImg} width={130} height={130} alt="suv" />
                   </div>
@@ -132,7 +129,7 @@ function Booking() {
                 placeholder="Phone Number:"
                 required
               />
-              
+
               <input
                 type="email"
                 name="email"
@@ -145,14 +142,26 @@ function Booking() {
               <label className="font-bold text-xl pb-4 mt-10">
                 Trip Schedule
               </label>
-              <label className="text-xs">
-                <input type="radio" name="check" /> Same-day booking? Call
-                01285 339 045{" "}
-              </label>
-              <label className="flex font-bold text-xs mt-2">
-                <input type="radio" name="check" className="mr-1" />
-                LATER
-              </label>
+              <div>
+                <label className="text-xs">
+                  <input
+                    type="radio"
+                    name="bookingType"
+                    value="samedaybooking"
+                  />
+                  Same-day booking? Call 01285 339 045
+                </label>
+                <label className="flex font-bold text-xs mt-2">
+                  <input
+                    type="radio"
+                    name="bookingType"
+                    value="later"
+                    className="mr-1"
+                  />
+                  LATER
+                </label>
+              </div>
+
               <div className="tripSchedule">
                 <input
                   type="text"
@@ -167,7 +176,7 @@ function Booking() {
                   className="bookinginputField tripInput py-3 px-3 my-3 mx-0 w-[80%]"
                   required
                 >
-                  <option value="month">Month</option>
+                  <option value="">Month</option>
                   <option value="January">January</option>
                   <option value="February">February</option>
                   <option value="March">March</option>
@@ -187,7 +196,7 @@ function Booking() {
                   className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
                   required
                 >
-                  <option value="Day">Day</option>
+                  <option value="">Day</option>
                   {options.map((value) => (
                     <option key={value} value={value}>
                       {value}
@@ -200,7 +209,7 @@ function Booking() {
                   className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
                   required
                 >
-                  <option value="Hour">Hour</option>
+                  <option value="">Hour</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -220,7 +229,7 @@ function Booking() {
                   className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
                   required
                 >
-                  <option value="minutes">Minutes</option>
+                  <option value="">Minutes</option>
                   {minutes.map((minute) => (
                     <option key={minute} value={minute}>
                       {minute < 10 ? `0${minute}` : minute}
@@ -248,7 +257,7 @@ function Booking() {
               </p>
               <textarea
                 rows={6}
-                name="textarea"
+                name="travel notes"
                 className="bookinginputField p-2 my-4"
                 placeholder="Type here"
               ></textarea>
@@ -256,7 +265,7 @@ function Booking() {
                 <p className="bookTerms flex">
                   <input
                     type="checkbox"
-                    name="checkbox"
+                    name="Terms and Conditions"
                     className="mr-2"
                     required
                   />
