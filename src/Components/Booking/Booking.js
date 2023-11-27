@@ -19,7 +19,7 @@ function Booking() {
           <h1>Let’s help you get there</h1>
 
           <form
-            action="https://getform.io/f/70224db2-3deb-4a15-8d59-15c113887808"
+            action="https://getform.io/f/94348228-1663-4ad6-b3fc-dd856499b705"
             method="POST"
             className="formcontainer flex flex-col"
           >
@@ -28,7 +28,7 @@ function Booking() {
               <div className="input-with-image">
                 <input
                   type="text"
-                  name="PickupLocation"
+                  name="pickupLocation"
                   className="bookinginputField inputSpecial py-4 px-10 my-3"
                   placeholder="Pickup location:"
                   required
@@ -83,10 +83,10 @@ function Booking() {
               </label>
               <div className="carContainer flex flex-col justify-between">
                 <div className="chooseCar">
-                  <input type="radio" name="car" id="carOption" />
+                  <input type="radio" name="vehicleType" value="Car" />
                   <div className="flex items-end">
                     <div className="pt-3">
-                      <label htmlFor="carOption">
+                      <label>
                         <h2 className="text-sm text-left py-0">Car</h2>
                         <p>4 passengers max</p>
                       </label>
@@ -96,10 +96,10 @@ function Booking() {
                 </div>
 
                 <div className="chooseCar chooseCar2">
-                  <input type="radio" name="car" id="mpvOption" />
+                  <input type="radio" name="vehicleType" value="MPV" />
                   <div className="flex">
                     <div className="pt-9">
-                      <label htmlFor="mpvOption">
+                      <label>
                         <h2 className="text-xs text-left py-0">MPV</h2>
                         <p>8 passengers max</p>
                       </label>
@@ -147,7 +147,7 @@ function Booking() {
                   <input
                     type="radio"
                     name="bookingType"
-                    value="samedaybooking"
+                    value="Same day booking"
                   />
                   Same-day booking? Call 01285 339 045
                 </label>
@@ -155,7 +155,7 @@ function Booking() {
                   <input
                     type="radio"
                     name="bookingType"
-                    value="later"
+                    value="Later"
                     className="mr-1"
                   />
                   LATER
