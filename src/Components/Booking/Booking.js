@@ -147,7 +147,7 @@ function Booking() {
                   <input
                     type="radio"
                     name="bookingType"
-                    value="Same day booking"
+                    value="SameDayBooking"
                   />
                   Same-day booking? Call 01285 339 045
                 </label>
