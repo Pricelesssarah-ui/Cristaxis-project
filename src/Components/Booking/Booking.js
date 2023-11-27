@@ -20,7 +20,7 @@ function Booking() {
           <h1>Let’s help you get there</h1>
 
           <form
-            action="https://getform.io/f/73bbb62f-1b6b-46de-8a51-1e5997156625"
+            action="https://getform.io/f/70224db2-3deb-4a15-8d59-15c113887808"
             method="POST"
             className="formcontainer flex flex-col"
           >
