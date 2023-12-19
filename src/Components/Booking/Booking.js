@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "./Booking.css";
-
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import SendImg from "../../assets/images/svgs/send_icon.svg";
 import MapIcon from "../../assets/images/svgs/map_icon.svg";
 import CarImg from "../../assets/images/pngs/car_img.png";
@@ -12,6 +12,42 @@ function Booking() {
   const options = Array.from({ length: 31 }, (_, index) => index + 1);
   const minutes = Array.from({ length: 60 }, (_, index) => index);
 
+  const formik = useFormik({
+    initialValues: {
+      pickupLocation: "",
+      pickupPostCode: "",
+      destination: "",
+      destinationPostCode: "",
+      vehicleType: "",
+      name: "",
+      number: "",
+      email: "",
+      termsAndConditions: false,
+    },
+    validationSchema: Yup.object({
+      pickupLocation: Yup.string().required("Pickup location is required"),
+      pickupPostCode: Yup.string().required("Pickup Post Code is required"),
+      destination: Yup.string().required("Destination is required"),
+      destinationPostCode: Yup.string().required(
+        "Destination Post Code is required"
+      ),
+      vehicleType: Yup.string().required("Please choose a vehicle type"),
+      name: Yup.string().required("Name is required"),
+      number: Yup.string().required("Phone Number is required"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Email is required"),
+      termsAndConditions: Yup.boolean().oneOf(
+        [true],
+        "You must accept the terms and conditions"
+      ),
+    }),
+    onSubmit: (values) => {
+      // Handle form submission here
+      console.log("Form submitted with values:", values);
+    },
+  });
+
   return (
     <div className="bookingContainer">
       <div className="container">
@@ -19,8 +55,7 @@ function Booking() {
           <h1>Let’s help you get there</h1>
 
           <form
-            action="https://getform.io/f/94348228-1663-4ad6-b3fc-dd856499b705"
-            method="POST"
+            onSubmit={formik.handleSubmit}
             className="formcontainer flex flex-col"
           >
             <>
@@ -31,8 +66,13 @@ function Booking() {
                   name="pickupLocation"
                   className="bookinginputField inputSpecial py-4 px-10 my-3"
                   placeholder="Pickup location:"
-                  required
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.pickup}
                 />
+                {formik.touched.pickup && formik.errors.pickup && (
+                  <div className="error">{formik.errors.pickup}</div>
+                )}
 
                 <img
                   src={SendImg}
@@ -48,8 +88,13 @@ function Booking() {
                 name="pickupPostCode"
                 className="bookinginputField inputSpecial py-4 px-10"
                 placeholder="Pickup Post Code:"
-                required
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.postCode}
               />
+              {formik.touched.postCode && formik.errors.postCode && (
+                <div className="error">{formik.errors.postCode}</div>
+              )}
 
               <div className="input-with-image">
                 <input
@@ -57,8 +102,13 @@ function Booking() {
                   name="destination"
                   className="bookinginputField inputSpecial py-4 px-10 my-3"
                   placeholder="Destination:"
-                  required
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.destination}
                 />
+                {formik.touched.destination && formik.errors.destination && (
+                  <div className="error">{formik.errors.destination}</div>
+                )}
 
                 <img
                   src={MapIcon}
@@ -74,8 +124,16 @@ function Booking() {
                 name="destinationPostCode"
                 className="bookinginputField inputSpecial py-4 px-10"
                 placeholder="Destination Post Code:"
-                required
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.destinationPostCode}
               />
+              {formik.touched.destinationPostCode &&
+                formik.errors.destinationPostCode && (
+                  <div className="error">
+                    {formik.errors.destinationPostCode}
+                  </div>
+                )}
             </>
             <>
               <label className="font-bold text-xl pb-4 mt-10">
@@ -119,24 +177,39 @@ function Booking() {
                 name="name"
                 className="bookinginputField py-3 px-7"
                 placeholder="First Name and Last Name:"
-                required
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.name}
               />
+              {formik.touched.name && formik.errors.name && (
+                <div className="error">{formik.errors.name}</div>
+              )}
 
               <input
                 type="text"
                 name="number"
                 className="bookinginputField py-3 px-7 my-5"
                 placeholder="Phone Number:"
-                required
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.number}
               />
+              {formik.touched.number && formik.errors.number && (
+                <div className="error">{formik.errors.number}</div>
+              )}
 
               <input
                 type="email"
                 name="email"
                 className="bookinginputField py-3 px-7"
                 placeholder="Email Address:"
-                required
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
               />
+              {formik.touched.email && formik.errors.email && (
+                <div className="error">{formik.errors.email}</div>
+              )}
             </>
             <>
               <label className="font-bold text-xl pb-4 mt-10">
