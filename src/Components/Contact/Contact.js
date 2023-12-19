@@ -5,8 +5,26 @@ import { motion } from "framer-motion";
 // import useSWR from "swr";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { contactCompany } from "../../pages/api/contact-us";
+
 
 function Contact() {
+  console.log(process.env.PUBLIC_URL)
+  const onSubmit = async (values) => {
+    const submittedValues = {
+      email: values?.email,
+      name: values?.name,
+      phoneNumber: values?.phoneNumber,
+      message: values?.textarea
+    };
+    try {
+      const response = await contactCompany(submittedValues);
+      console.log(response)
+    } catch (error) {
+
+    }
+
+  }
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -24,10 +42,7 @@ function Contact() {
       companyName: Yup.string(),
       textarea: Yup.string(),
     }),
-    onSubmit: (values) => {
-      // Handle form submission here
-      console.log("Form submitted with values:", values);
-    },
+    onSubmit
   });
 
   return (
