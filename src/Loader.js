@@ -3,10 +3,10 @@ import { Oval } from "react-loader-spinner";
 
 function Loader() {
   return (
-    <span className="flex justify-center items-center w-[100%] h-[100%] bg-black">
+    <span className="flex justify-center items-center ml-2">
       <Oval
-        height={80}
-        width={80}
+        height={30}
+        width={30}
         color="#4fa94d"
         wrapperStyle={{}}
         wrapperClass=""

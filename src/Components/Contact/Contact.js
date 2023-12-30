@@ -1,16 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import { motion } from "framer-motion";
-// import { NavLink } from "react-router-dom";
-// import useSWR from "swr";
-import { useFormik } from "formik";
-import * as Yup from "yup";
 import { contactCompany } from "../../pages/api/contact-us";
 import { useNavigate } from "react-router-dom";
 import Loader from "../../Loader";
 
-function Contact({ isLoading }) {
+function Contact() {
   const navigate = useNavigate();
+  const [values, setValues] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (values) => {
     const submittedValues = {
@@ -21,39 +19,19 @@ function Contact({ isLoading }) {
       message: values?.textarea,
     };
     try {
-      isLoading = true;
+      setIsLoading(true);
       const response = await contactCompany(submittedValues);
-      isLoading = false;
+      setIsLoading(false)
       if (response.status === 200 || response.status === 201) {
         navigate("/SuccessContactpage");
       } else {
-        isLoading = false;
         console.log("An error has occured");
       }
     } catch (error) {
-      isLoading = false;
+      setIsLoading(false)
       console.error("Contact_us Error", error);
     }
   };
-  const formik = useFormik({
-    initialValues: {
-      name: "",
-      phoneNumber: "",
-      email: "",
-      companyName: "",
-      textarea: "",
-    },
-    validationSchema: Yup.object({
-      name: Yup.string().required("Name is required"),
-      phoneNumber: Yup.string().required("Phone Number is required"),
-      email: Yup.string()
-        .email("Invalid email address")
-        .required("Email is required"),
-      companyName: Yup.string(),
-      textarea: Yup.string(),
-    }),
-    onSubmit,
-  });
 
   return (
     <motion.div
@@ -73,7 +51,10 @@ function Contact({ isLoading }) {
           </div>
 
           <form
-            onSubmit={formik.handleSubmit}
+            onSubmit={(e) => {
+              e.preventDefault();
+              onSubmit(values);
+            }}
             className="formcontainer flex flex-col"
           >
             <input
@@ -81,66 +62,55 @@ function Contact({ isLoading }) {
               name="name"
               className="inputField py-3 px-2"
               placeholder="Name:"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.name}
+              required
+              onChange={(e) => setValues({ ...values, name: e.target.value })}
             />
-            {formik.touched.name && formik.errors.name && (
-              <div className="error">{formik.errors.name}</div>
-            )}
 
             <input
               type="number"
               name="phoneNumber"
               className="inputField py-3 px-2 my-3"
               placeholder="Phone Number:"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.phoneNumber}
+              required
+              onChange={(e) =>
+                setValues({ ...values, phoneNumber: e.target.value })
+              }
             />
-            {formik.touched.phoneNumber && formik.errors.phoneNumber && (
-              <div className="error">{formik.errors.phoneNumber}</div>
-            )}
 
             <input
               type="email"
               name="email"
               className="inputField py-3 px-2"
               placeholder="Email Address:"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.email}
+              required
+              onChange={(e) => setValues({ ...values, email: e.target.value })}
             />
-            {formik.touched.email && formik.errors.email && (
-              <div className="error">{formik.errors.email}</div>
-            )}
 
             <input
               type="text"
               name="companyName"
               className="inputField py-3 px-2 my-3"
               placeholder="Company Name:"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.companyName}
+              required
+              onChange={(e) =>
+                setValues({ ...values, companyName: e.target.value })
+              }
             />
-            {formik.touched.companyName && formik.errors.companyName && (
-              <div className="error">{formik.errors.companyName}</div>
-            )}
+
             <textarea
               rows={8}
               name="textarea"
               className="inputField p-2"
               placeholder="Type Message Here"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.textarea}
+              required
+              onChange={(e) =>
+                setValues({ ...values, textarea: e.target.value })
+              }
             />
 
-            <button type="submit" className="contactSubmit">
+            <button type="submit" className="contactSubmit ">
               SEND MESSAGE {isLoading && <Loader />}
             </button>
-            
           </form>
         </div>
       </div>

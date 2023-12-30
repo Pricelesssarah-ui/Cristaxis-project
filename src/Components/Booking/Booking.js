@@ -9,8 +9,9 @@ import SuvImg from "../../assets/images/pngs/suv_img.png";
 import { bookATaxi } from "../../pages/api/book-a-taxi";
 import Loader from "../../Loader";
 
-function Booking({ isSubmitting }) {
+function Booking() {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
   const [selectedOption, setSelectedOption] = useState("sameDayBooking");
   const [values, setValues] = useState({});
   const [selectedDate, setSelectedDate] = useState({
@@ -47,7 +48,7 @@ function Booking({ isSubmitting }) {
 
   const onSubmit = async (values) => {
     try {
-      isSubmitting = true;
+      setIsLoading(true)
       const submittedValues = {
         pickup_location: values?.pickup_location,
         pickup_postcode: values?.pickup_postcode,
@@ -73,16 +74,15 @@ function Booking({ isSubmitting }) {
         submittedValues.scheduledRide = selectedDate;
       }
       const response = await bookATaxi(submittedValues);
-      isSubmitting = false;
+      setIsLoading(false)
       console.log(response);
       if (response.status === 200 || response.status === 201) {
         navigate("/SuccessBooking");
       } else {
-        isSubmitting = false;
         console.log("An error has occurred");
       }
     } catch (error) {
-      isSubmitting = false;
+      setIsLoading(false)
       console.error("Book a taxi Error", error);
     }
   };
@@ -417,7 +417,7 @@ function Booking({ isSubmitting }) {
             </>
 
             <button type="submit" className="bookingSubmit contactText text-lg">
-              Submit Request {isSubmitting && <Loader />}
+              Submit Request {isLoading && <Loader />}
             </button>
           </form>
         </div>
