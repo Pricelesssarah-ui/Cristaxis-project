@@ -1,5 +1,7 @@
-import axios, { AxiosError } from 'axios';
+//import axios, { AxiosError } from 'axios';
 //import { getCookie } from 'cookies-next';
+import axios from 'axios';
+
 
 export const axiosInstance = () =>
   axios.create({

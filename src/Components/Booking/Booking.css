@@ -84,6 +84,10 @@
   font-size: 12px;
 }
 
+.error {
+  color: red;
+}
+
 @media (min-width: 1100px) {
   .bookingItems {
     width: 60%;
@@ -99,6 +103,10 @@
 
   .carContainer {
     flex-direction: row;
+  }
+
+  .chooseCar {
+    width: 100%;
   }
 
   .chooseCar2 {

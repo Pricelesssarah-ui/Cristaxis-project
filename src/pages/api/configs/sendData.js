@@ -1,9 +1,9 @@
-import { AxiosResponse } from "axios";
+// import { AxiosResponse } from "axios";
 // import { axiosInstance } from "./fetcher";
 
 const { axiosInstance } = require("./fetcher");
 
-export const postData = async (url, data, ) => {
+export const postData = async (url, data) => {
   try {
     const result = await axiosInstance().post(url, data);
     return result;
@@ -21,7 +21,7 @@ export const putData = async (url, data, ) => {
   }
 };
 
-export const patchData = async (url, data, ) => {
+export const patchData = async (url, data) => {
   try {
     const result = await axiosInstance().patch(url, data);
     return result;
@@ -39,7 +39,7 @@ export const deleteData = async (url, ) => {
   }
 };
 
-export const postMultipartData = async (url, data, ) => {
+export const postMultipartData = async (url, data) => {
   try {
     const result = await axiosInstance().post(url, data, {
       headers: {
@@ -55,7 +55,7 @@ export const postMultipartData = async (url, data, ) => {
 export const mutationRequest = (url, type, data) => {
   switch (type) {
     case "post":
-      return postData(url, data );
+      return postData(url, data);
     case "put":
       return putData(url, data);
     case "patch":

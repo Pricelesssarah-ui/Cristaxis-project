@@ -1,4 +1,4 @@
-import useSwr, { SWRResponse } from "swr";
+// import useSwr, { SWRResponse } from "swr";
 
 import { CONTACT_US } from "../../utils/routes";
 import { mutationRequest } from "./configs/sendData";

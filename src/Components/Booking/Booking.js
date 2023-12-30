@@ -1,61 +1,113 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Booking.css";
-import { useFormik } from "formik";
-import * as Yup from "yup";
+import { motion } from "framer-motion";
 import SendImg from "../../assets/images/svgs/send_icon.svg";
 import MapIcon from "../../assets/images/svgs/map_icon.svg";
 import CarImg from "../../assets/images/pngs/car_img.png";
 import SuvImg from "../../assets/images/pngs/suv_img.png";
+import { bookATaxi } from "../../pages/api/book-a-taxi";
+import Loader from "../../Loader";
 
-function Booking() {
+function Booking({ isSubmitting }) {
+  const navigate = useNavigate();
+  const [selectedOption, setSelectedOption] = useState("sameDayBooking");
+  const [values, setValues] = useState({});
+  const [selectedDate, setSelectedDate] = useState({
+    year: "",
+    month: "",
+    day: "",
+    hour: "",
+    minute: "",
+    meridian: "",
+  });
+
+  const handleVehicleTypeChange = (event) => {
+    setValues({ ...values, vehicleType: event.target.value });
+  };
+
+  const handleOptionChange = (option) => {
+    setSelectedOption(option);
+    console.log(option);
+  };
+
+  const handleDateChange = (event) => {
+    setSelectedDate({
+      ...selectedDate,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleTimeChange = (event) => {
+    setSelectedDate({
+      ...selectedDate,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const onSubmit = async (values) => {
+    try {
+      isSubmitting = true;
+      const submittedValues = {
+        pickup_location: values?.pickup_location,
+        pickup_postcode: values?.pickup_postcode,
+        destination: values?.destination,
+        destination_postcode: values?.destination_postcode,
+        vehicleType: values?.vehicleType,
+        fullname: values?.fullname,
+        phoneNumber: values?.phoneNumber,
+        email: values?.email,
+        sameDayBooking: selectedOption === "sameDayBooking" ? true : false,
+        travelNotes: values?.travelNotes,
+        //termsAndConditions: values?.termsAndConditions,
+      };
+
+      if (selectedOption === "later") {
+        selectedDate.year = Number(selectedDate.year);
+        selectedDate.month = Number(selectedDate.month);
+        selectedDate.day = Number(selectedDate.day);
+        selectedDate.hour = Number(selectedDate.hour);
+        selectedDate.minute = Number(selectedDate.minute);
+        selectedDate.meridian = selectedDate.meridian || "AM";
+
+        submittedValues.scheduledRide = selectedDate;
+      }
+      const response = await bookATaxi(submittedValues);
+      isSubmitting = false;
+      console.log(response);
+      if (response.status === 200 || response.status === 201) {
+        navigate("/SuccessBooking");
+      } else {
+        isSubmitting = false;
+        console.log("An error has occurred");
+      }
+    } catch (error) {
+      isSubmitting = false;
+      console.error("Book a taxi Error", error);
+    }
+  };
+
   const options = Array.from({ length: 31 }, (_, index) => index + 1);
   const minutes = Array.from({ length: 60 }, (_, index) => index);
 
-  const formik = useFormik({
-    initialValues: {
-      pickupLocation: "",
-      pickupPostCode: "",
-      destination: "",
-      destinationPostCode: "",
-      vehicleType: "",
-      name: "",
-      number: "",
-      email: "",
-      termsAndConditions: false,
-    },
-    validationSchema: Yup.object({
-      pickupLocation: Yup.string().required("Pickup location is required"),
-      pickupPostCode: Yup.string().required("Pickup Post Code is required"),
-      destination: Yup.string().required("Destination is required"),
-      destinationPostCode: Yup.string().required(
-        "Destination Post Code is required"
-      ),
-      vehicleType: Yup.string().required("Please choose a vehicle type"),
-      name: Yup.string().required("Name is required"),
-      number: Yup.string().required("Phone Number is required"),
-      email: Yup.string()
-        .email("Invalid email address")
-        .required("Email is required"),
-      termsAndConditions: Yup.boolean().oneOf(
-        [true],
-        "You must accept the terms and conditions"
-      ),
-    }),
-    onSubmit: (values) => {
-      // Handle form submission here
-      console.log("Form submitted with values:", values);
-    },
-  });
-
   return (
-    <div className="bookingContainer">
-      <div className="container">
-        <div className="bookingItems">
-          <h1>Let’s help you get there</h1>
+    <motion.div
+      name="contact"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <div className="bookingContainer">
+        <div className="container">
+          <div className="bookingItems">
+            <h1>Let’s help you get there</h1>
+          </div>
 
           <form
-            onSubmit={formik.handleSubmit}
+            onSubmit={(e) => {
+              e.preventDefault();
+              onSubmit(values);
+            }}
             className="formcontainer flex flex-col"
           >
             <>
@@ -63,16 +115,14 @@ function Booking() {
               <div className="input-with-image">
                 <input
                   type="text"
-                  name="pickupLocation"
+                  name="pickup_location"
                   className="bookinginputField inputSpecial py-4 px-10 my-3"
-                  placeholder="Pickup location:"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.pickup}
+                  placeholder="Pickup Location:"
+                  required
+                  onChange={(e) =>
+                    setValues({ ...values, pickup_location: e.target.value })
+                  }
                 />
-                {formik.touched.pickup && formik.errors.pickup && (
-                  <div className="error">{formik.errors.pickup}</div>
-                )}
 
                 <img
                   src={SendImg}
@@ -84,17 +134,15 @@ function Booking() {
               </div>
 
               <input
-                type="text"
-                name="pickupPostCode"
+                type="number"
+                name="pickup_postcode"
                 className="bookinginputField inputSpecial py-4 px-10"
                 placeholder="Pickup Post Code:"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.postCode}
+                required
+                onChange={(e) =>
+                  setValues({ ...values, pickup_postcode: e.target.value })
+                }
               />
-              {formik.touched.postCode && formik.errors.postCode && (
-                <div className="error">{formik.errors.postCode}</div>
-              )}
 
               <div className="input-with-image">
                 <input
@@ -102,13 +150,11 @@ function Booking() {
                   name="destination"
                   className="bookinginputField inputSpecial py-4 px-10 my-3"
                   placeholder="Destination:"
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.destination}
+                  required
+                  onChange={(e) =>
+                    setValues({ ...values, destination: e.target.value })
+                  }
                 />
-                {formik.touched.destination && formik.errors.destination && (
-                  <div className="error">{formik.errors.destination}</div>
-                )}
 
                 <img
                   src={MapIcon}
@@ -120,32 +166,33 @@ function Booking() {
               </div>
 
               <input
-                type="text"
-                name="destinationPostCode"
+                type="number"
+                name="destination_postcode"
                 className="bookinginputField inputSpecial py-4 px-10"
                 placeholder="Destination Post Code:"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.destinationPostCode}
+                required
+                onChange={(e) =>
+                  setValues({ ...values, destination_postcode: e.target.value })
+                }
               />
-              {formik.touched.destinationPostCode &&
-                formik.errors.destinationPostCode && (
-                  <div className="error">
-                    {formik.errors.destinationPostCode}
-                  </div>
-                )}
             </>
+
             <>
               <label className="font-bold text-xl pb-4 mt-10">
                 Choose your car
               </label>
               <div className="carContainer flex flex-col justify-between">
                 <div className="chooseCar">
-                  <input type="radio" name="vehicleType" value="Car" />
+                  <input
+                    type="radio"
+                    name="vehicleType"
+                    value="car"
+                    onChange={handleVehicleTypeChange}
+                  />
                   <div className="flex items-end">
                     <div className="pt-3">
                       <label>
-                        <h2 className="text-sm text-left py-0">Car</h2>
+                        <h2 className="text-sm text-left py-0">car</h2>
                         <p>4 passengers max</p>
                       </label>
                     </div>
@@ -154,7 +201,12 @@ function Booking() {
                 </div>
 
                 <div className="chooseCar chooseCar2">
-                  <input type="radio" name="vehicleType" value="MPV" />
+                  <input
+                    type="radio"
+                    name="vehicleType"
+                    value="MPV"
+                    onChange={handleVehicleTypeChange}
+                  />
                   <div className="flex">
                     <div className="pt-9">
                       <label>
@@ -174,151 +226,153 @@ function Booking() {
               </label>
               <input
                 type="text"
-                name="name"
+                name="fullname"
                 className="bookinginputField py-3 px-7"
                 placeholder="First Name and Last Name:"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.name}
+                required
+                onChange={(e) =>
+                  setValues({ ...values, fullname: e.target.value })
+                }
               />
-              {formik.touched.name && formik.errors.name && (
-                <div className="error">{formik.errors.name}</div>
-              )}
 
               <input
-                type="text"
-                name="number"
+                type="number"
+                name="phoneNumber"
                 className="bookinginputField py-3 px-7 my-5"
                 placeholder="Phone Number:"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.number}
+                required
+                onChange={(e) =>
+                  setValues({ ...values, phoneNumber: e.target.value })
+                }
               />
-              {formik.touched.number && formik.errors.number && (
-                <div className="error">{formik.errors.number}</div>
-              )}
 
               <input
                 type="email"
                 name="email"
                 className="bookinginputField py-3 px-7"
                 placeholder="Email Address:"
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.email}
+                required
+                onChange={(e) =>
+                  setValues({ ...values, email: e.target.value })
+                }
               />
-              {formik.touched.email && formik.errors.email && (
-                <div className="error">{formik.errors.email}</div>
-              )}
             </>
+
             <>
               <label className="font-bold text-xl pb-4 mt-10">
                 Trip Schedule
               </label>
-              <div>
+              <div className="radio-group">
                 <label className="text-xs">
                   <input
                     type="radio"
-                    name="bookingType"
+                    name="sameDayBooking"
                     value="SameDayBooking"
+                    checked={selectedOption === "sameDayBooking"}
+                    onChange={() => handleOptionChange("sameDayBooking")}
                   />
                   Same-day booking? Call 01285 339 045
                 </label>
+
                 <label className="flex font-bold text-xs mt-2">
                   <input
                     type="radio"
-                    name="bookingType"
+                    name="sameDayBooking"
                     value="Later"
                     className="mr-1"
+                    checked={selectedOption === "later"}
+                    onChange={() => handleOptionChange("later")}
                   />
                   LATER
                 </label>
               </div>
 
-              <div className="tripSchedule">
-                <input
-                  type="text"
-                  name="year"
-                  className="bookinginputField tripInput py-3 font-bold px-3 my-3 w-[80%]"
-                  placeholder="Year"
-                  required
-                />
+              {selectedOption === "later" && (
+                <div className="tripSchedule">
+                  <input
+                    type="text"
+                    name="year"
+                    className="bookinginputField tripInput py-3 font-bold px-3 my-3 w-[80%]"
+                    placeholder="Year"
+                    onChange={handleDateChange}
+                  />
 
-                <select
-                  name="month"
-                  className="bookinginputField tripInput py-3 px-3 my-3 mx-0 w-[80%]"
-                  required
-                >
-                  <option value="">Month</option>
-                  <option value="January">January</option>
-                  <option value="February">February</option>
-                  <option value="March">March</option>
-                  <option value="April">April</option>
-                  <option value="May">May</option>
-                  <option value="June">June</option>
-                  <option value="July">July</option>
-                  <option value="August">August</option>
-                  <option value="September">September</option>
-                  <option value="October">October</option>
-                  <option value="November">November</option>
-                  <option value="December">December</option>
-                </select>
+                  <select
+                    name="month"
+                    onChange={handleDateChange}
+                    className="bookinginputField tripInput py-3 px-3 my-3 mx-0 w-[80%]"
+                  >
+                    <option value="">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
 
-                <select
-                  name="day"
-                  className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
-                  required
-                >
-                  <option value="">Day</option>
-                  {options.map((value) => (
-                    <option key={value} value={value}>
-                      {value}
-                    </option>
-                  ))}
-                </select>
+                  <select
+                    name="day"
+                    onChange={handleDateChange}
+                    className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
+                  >
+                    <option value="">Day</option>
+                    {options.map((value) => (
+                      <option key={value} value={value}>
+                        {value}
+                      </option>
+                    ))}
+                  </select>
 
-                <select
-                  name="hour"
-                  className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
-                  required
-                >
-                  <option value="">Hour</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                </select>
+                  <select
+                    name="hour"
+                    onChange={handleTimeChange}
+                    className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
+                  >
+                    <option value="">Hour</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
 
-                <select
-                  name="minutes"
-                  className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
-                  required
-                >
-                  <option value="">Minutes</option>
-                  {minutes.map((minute) => (
-                    <option key={minute} value={minute}>
-                      {minute < 10 ? `0${minute}` : minute}
-                    </option>
-                  ))}
-                </select>
+                  <select
+                    name="minute"
+                    onChange={handleTimeChange}
+                    className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
+                  >
+                    <option value="">Minutes</option>
+                    {minutes.map((minute) => (
+                      <option key={minute} value={minute}>
+                        {minute < 10 ? `0${minute}` : minute}
+                      </option>
+                    ))}
+                  </select>
 
-                <select
-                  name="time"
-                  className="bookinginputField tripInput py-3 my-3 mx-0 w-[60%]"
-                  required
-                >
-                  <option value="AM">AM</option>
-                  <option value="PM">PM</option>
-                </select>
-              </div>
+                  <select
+                    name="meridian"
+                    onChange={handleTimeChange}
+                    className="bookinginputField tripInput py-3 my-3 mx-0 w-[60%]"
+                  >
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                  </select>
+                </div>
+              )}
             </>
 
             <>
@@ -330,17 +384,25 @@ function Booking() {
               </p>
               <textarea
                 rows={6}
-                name="travel notes"
+                name="travelNotes"
                 className="bookinginputField p-2 my-4"
                 placeholder="Type here"
+                onChange={(e) =>
+                  setValues({ ...values, travelNotes: e.target.value })
+                }
               ></textarea>
               <>
                 <p className="bookTerms flex">
                   <input
                     type="checkbox"
-                    name="Terms and Conditions"
+                    name="termsAndConditions"
                     className="mr-2"
-                    required
+                    onChange={(e) =>
+                      setValues({
+                        ...values,
+                        termsAndConditions: e.target.value,
+                      })
+                    }
                   />
                   By submitting a request, you agree to our
                   <Link to="/Terms" className="px-1 font-bold underline">
@@ -355,13 +417,12 @@ function Booking() {
             </>
 
             <button type="submit" className="bookingSubmit contactText text-lg">
-              Submit Request
+              Submit Request {isSubmitting && <Loader />}
             </button>
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
-
 export default Booking;

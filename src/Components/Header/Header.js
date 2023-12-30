@@ -42,7 +42,7 @@ const Header = ({ nav, setNav }) => {
                 className="navitem px-3 cursor-pointer font-medium text-white 
                      hover:scale-125 duration-300"
               >
-                <Link to={link} smooth duration={300}>
+                <Link to={link} duration={300}>
                   {link}
                 </Link>
               </li>
@@ -87,7 +87,7 @@ const Header = ({ nav, setNav }) => {
                     <Link
                       onClick={() => setNav(!nav)}
                       to={link}
-                      smooth
+                    
                       duration={300}
                     >
                       {link}
@@ -99,7 +99,7 @@ const Header = ({ nav, setNav }) => {
                   <Link
                     to="/booking"
                     onClick={() => setNav(!nav)}
-                    smooth
+                  
                     duration={300}
                     className="hover:scale-100 duration-300 text-xs"
                   >

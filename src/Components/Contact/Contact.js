@@ -6,25 +6,35 @@ import { motion } from "framer-motion";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { contactCompany } from "../../pages/api/contact-us";
+import { useNavigate } from "react-router-dom";
+import Loader from "../../Loader";
 
+function Contact({ isLoading }) {
+  const navigate = useNavigate();
 
-function Contact() {
-  console.log(process.env.PUBLIC_URL)
   const onSubmit = async (values) => {
     const submittedValues = {
       email: values?.email,
       name: values?.name,
       phoneNumber: values?.phoneNumber,
-      message: values?.textarea
+      companyName: values?.companyName,
+      message: values?.textarea,
     };
     try {
+      isLoading = true;
       const response = await contactCompany(submittedValues);
-      console.log(response)
+      isLoading = false;
+      if (response.status === 200 || response.status === 201) {
+        navigate("/SuccessContactpage");
+      } else {
+        isLoading = false;
+        console.log("An error has occured");
+      }
     } catch (error) {
-
+      isLoading = false;
+      console.error("Contact_us Error", error);
     }
-
-  }
+  };
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -42,7 +52,7 @@ function Contact() {
       companyName: Yup.string(),
       textarea: Yup.string(),
     }),
-    onSubmit
+    onSubmit,
   });
 
   return (
@@ -80,7 +90,7 @@ function Contact() {
             )}
 
             <input
-              type="text"
+              type="number"
               name="phoneNumber"
               className="inputField py-3 px-2 my-3"
               placeholder="Phone Number:"
@@ -114,7 +124,9 @@ function Contact() {
               onBlur={formik.handleBlur}
               value={formik.values.companyName}
             />
-
+            {formik.touched.companyName && formik.errors.companyName && (
+              <div className="error">{formik.errors.companyName}</div>
+            )}
             <textarea
               rows={8}
               name="textarea"
@@ -126,8 +138,9 @@ function Contact() {
             />
 
             <button type="submit" className="contactSubmit">
-              SEND MESSAGE
+              SEND MESSAGE {isLoading && <Loader />}
             </button>
+            
           </form>
         </div>
       </div>

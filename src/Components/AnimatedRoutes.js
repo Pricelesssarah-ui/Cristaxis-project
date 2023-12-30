@@ -8,11 +8,11 @@ import About from "./About/About";
 import Footer from "./Footer/Footer";
 import Blog from "./Blog/Blog";
 import Contact from "./Contact/Contact";
-import Booking from "./Booking/Booking";
 import SuccessContactpage from "./SuccessContactpage/SuccessContactpage";
 import SuccessBooking from "./SuccessBooking/SuccessBooking";
 import Terms from "./Terms/Terms";
 import Cancellation from "./Cancellation/Cancellation";
+import Booking from "./Booking/Booking";
 
 
 
