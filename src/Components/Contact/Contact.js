@@ -67,7 +67,7 @@ function Contact() {
             />
 
             <input
-              type="number"
+              type="text"
               name="phoneNumber"
               className="inputField py-3 px-2 my-3"
               placeholder="Phone Number:"

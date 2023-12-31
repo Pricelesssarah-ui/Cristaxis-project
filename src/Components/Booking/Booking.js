@@ -131,7 +131,7 @@ function Booking() {
               </div>
 
               <input
-                type="number"
+                type="text"
                 name="pickup_postcode"
                 className="bookinginputField inputSpecial py-4 px-10"
                 placeholder="Pickup Post Code:"
@@ -163,7 +163,7 @@ function Booking() {
               </div>
 
               <input
-                type="number"
+                type="text"
                 name="destination_postcode"
                 className="bookinginputField inputSpecial py-4 px-10"
                 placeholder="Destination Post Code:"
@@ -233,7 +233,7 @@ function Booking() {
               />
 
               <input
-                type="number"
+                type="text"
                 name="phoneNumber"
                 className="bookinginputField py-3 px-7 my-5"
                 placeholder="Phone Number:"
