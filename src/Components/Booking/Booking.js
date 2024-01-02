@@ -48,7 +48,7 @@ function Booking() {
 
   const onSubmit = async (values) => {
     try {
-      setIsLoading(true)
+      setIsLoading(true);
       const submittedValues = {
         pickup_location: values?.pickup_location,
         pickup_postcode: values?.pickup_postcode,
@@ -74,7 +74,7 @@ function Booking() {
         submittedValues.scheduledRide = selectedDate;
       }
       const response = await bookATaxi(submittedValues);
-      setIsLoading(false)
+      setIsLoading(false);
       console.log(response);
       if (response.status === 200 || response.status === 201) {
         navigate("/SuccessBooking");
@@ -82,7 +82,7 @@ function Booking() {
         console.log("An error has occurred");
       }
     } catch (error) {
-      setIsLoading(false)
+      setIsLoading(false);
       console.error("Book a taxi Error", error);
     }
   };
@@ -291,6 +291,7 @@ function Booking() {
                     name="year"
                     className="bookinginputField tripInput py-3 font-bold px-3 my-3 w-[80%]"
                     placeholder="Year"
+                    required
                     onChange={handleDateChange}
                   />
 
@@ -298,6 +299,7 @@ function Booking() {
                     name="month"
                     onChange={handleDateChange}
                     className="bookinginputField tripInput py-3 px-3 my-3 mx-0 w-[80%]"
+                    required
                   >
                     <option value="">Month</option>
                     <option value="01">January</option>
@@ -318,8 +320,9 @@ function Booking() {
                     name="day"
                     onChange={handleDateChange}
                     className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
+                    required
                   >
-                   <option value="">Day</option>
+                    <option value="">Day</option>
                     <option value="01">01</option>
                     <option value="02">02</option>
                     <option value="03">03</option>
@@ -357,6 +360,7 @@ function Booking() {
                     name="hour"
                     onChange={handleTimeChange}
                     className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
+                    required
                   >
                     <option value="">Hour</option>
                     <option value="1">1</option>
@@ -377,6 +381,7 @@ function Booking() {
                     name="minute"
                     onChange={handleTimeChange}
                     className="bookinginputField tripInput py-3 my-3 mx-0 w-[80%]"
+                    required
                   >
                     <option value="">Minute</option>
                     <option value="00">00</option>
@@ -445,6 +450,7 @@ function Booking() {
                     name="meridian"
                     onChange={handleTimeChange}
                     className="bookinginputField tripInput py-3 my-3 mx-0 w-[60%]"
+                    required
                   >
                     <option value="AM">AM</option>
                     <option value="PM">PM</option>
@@ -475,6 +481,7 @@ function Booking() {
                     type="checkbox"
                     name="termsAndConditions"
                     className="mr-2"
+                    required
                     onChange={(e) =>
                       setValues({
                         ...values,

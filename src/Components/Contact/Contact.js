@@ -15,20 +15,19 @@ function Contact() {
       email: values?.email,
       name: values?.name,
       phoneNumber: values?.phoneNumber,
-      companyName: values?.companyName,
       message: values?.textarea,
     };
     try {
       setIsLoading(true);
       const response = await contactCompany(submittedValues);
-      setIsLoading(false)
+      setIsLoading(false);
       if (response.status === 200 || response.status === 201) {
         navigate("/SuccessContactpage");
       } else {
         console.log("An error has occured");
       }
     } catch (error) {
-      setIsLoading(false)
+      setIsLoading(false);
       console.error("Contact_us Error", error);
     }
   };
@@ -84,17 +83,6 @@ function Contact() {
               placeholder="Email Address:"
               required
               onChange={(e) => setValues({ ...values, email: e.target.value })}
-            />
-
-            <input
-              type="text"
-              name="companyName"
-              className="inputField py-3 px-2 my-3"
-              placeholder="Company Name:"
-              required
-              onChange={(e) =>
-                setValues({ ...values, companyName: e.target.value })
-              }
             />
 
             <textarea
