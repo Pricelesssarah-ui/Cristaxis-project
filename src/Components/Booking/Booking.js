@@ -4,8 +4,6 @@ import "./Booking.css";
 import { motion } from "framer-motion";
 import SendImg from "../../assets/images/svgs/send_icon.svg";
 import MapIcon from "../../assets/images/svgs/map_icon.svg";
-import CarImg from "../../assets/images/pngs/car_img.png";
-import SuvImg from "../../assets/images/pngs/suv_img.png";
 import { bookATaxi } from "../../pages/api/book-a-taxi";
 import Loader from "../../Loader";
 
@@ -21,10 +19,6 @@ function Booking() {
     minute: "",
     meridian: "",
   });
-
-  const handleVehicleTypeChange = (event) => {
-    setValues({ ...values, vehicleType: event.target.value });
-  };
 
   const handleDateChange = (event) => {
     setSelectedDate({
@@ -48,12 +42,12 @@ function Booking() {
         pickup_postcode: values?.pickup_postcode,
         destination: values?.destination,
         destination_postcode: values?.destination_postcode,
-        vehicleType: values?.vehicleType,
+        no_of_passengers: values?.no_of_passengers,
         fullname: values?.fullname,
         phoneNumber: values?.phoneNumber,
         email: values?.email,
         travelNotes: values?.travelNotes,
-        // t_c: true,
+        t_c: true,
       };
       selectedDate.year = Number(selectedDate.year);
       selectedDate.month = String(selectedDate.month);
@@ -177,56 +171,23 @@ function Booking() {
               </label>
               <div>
                 <select
-                  name="passengers"
-                  onChange={handleDateChange}
+                  name="no_of_passengers"
+                  onChange={(e) =>
+                    setValues({ ...values, no_of_passengers: e.target.value })
+                  }
                   className="bookinginputField tripInput passengerInput py-3 my-3 mx-0 w-[80%]"
                   required
                 >
                   <option value="">select</option>
-                  <option value="01">01</option>
-                  <option value="02">02</option>
-                  <option value="03">03</option>
-                  <option value="04">04</option>
-                  <option value="05">05</option>
-                  <option value="06">06</option>
-                  <option value="07">07</option>
-                  <option value="08">08</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
                 </select>
-                {/* <div className="chooseCar">
-                  <input
-                    type="radio"
-                    name="vehicleType"
-                    value="car"
-                    onChange={handleVehicleTypeChange}
-                  />
-                  <div className="flex items-end">
-                    <div className="pt-3">
-                      <label>
-                        <h2 className="text-sm text-left py-0">car</h2>
-                        <p>4 passengers max</p>
-                      </label>
-                    </div>
-                    <img src={CarImg} width={130} height={130} alt="car" />
-                  </div>
-                </div>
-
-                <div className="chooseCar chooseCar2">
-                  <input
-                    type="radio"
-                    name="vehicleType"
-                    value="MPV"
-                    onChange={handleVehicleTypeChange}
-                  />
-                  <div className="flex">
-                    <div className="pt-9">
-                      <label>
-                        <h2 className="text-xs text-left py-0">MPV</h2>
-                        <p>8 passengers max</p>
-                      </label>
-                    </div>
-                    <img src={SuvImg} width={130} height={130} alt="suv" />
-                  </div>
-                </div>*/}
               </div>
             </>
 
@@ -272,30 +233,6 @@ function Booking() {
               <label className="font-bold text-xl pb-4 mt-10">
                 Trip Schedule
               </label>
-              {/* <div className="radio-group">
-                <label className="text-xs">
-                  <input
-                    type="radio"
-                    name="sameDayBooking"
-                    value="SameDayBooking"
-                    checked={selectedOption === "sameDayBooking"}
-                    onChange={() => handleOptionChange("sameDayBooking")}
-                  />
-                  Same-day booking? Call 01285 339 045
-                </label>
-
-                <label className="flex font-bold text-xs mt-2">
-                  <input
-                    type="radio"
-                    name="sameDayBooking"
-                    value="Later"
-                    className="mr-1"
-                    checked={selectedOption === "later"}
-                    onChange={() => handleOptionChange("later")}
-                  />
-                  LATER
-                </label>
-              </div> */}
 
               <div className="tripSchedule">
                 <input

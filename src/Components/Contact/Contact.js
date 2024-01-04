@@ -79,7 +79,7 @@ function Contact() {
             <input
               type="email"
               name="email"
-              className="inputField py-3 px-2 my-3"
+              className="inputField py-3 px-2 mb-3"
               placeholder="Email Address:"
               required
               onChange={(e) => setValues({ ...values, email: e.target.value })}
