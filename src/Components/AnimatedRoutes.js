@@ -14,8 +14,6 @@ import Terms from "./Terms/Terms";
 import Cancellation from "./Cancellation/Cancellation";
 import Booking from "./Booking/Booking";
 
-
-
 function AnimatedRoutes() {
   const [nav, setNav] = useState(false);
   const location = useLocation();
@@ -25,10 +23,10 @@ function AnimatedRoutes() {
       <Header nav={nav} setNav={setNav} />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Landingpage />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/contact us" element={<Contact />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Blog" element={<Blog />} />
+        <Route path="/Booking" element={<Booking />} />
+        <Route path="/Contact us" element={<Contact />} />
         <Route path="/SuccessContactpage" element={<SuccessContactpage />} />
         <Route path="/SuccessBooking" element={<SuccessBooking />} />
         <Route path="/Terms" element={<Terms />} />
