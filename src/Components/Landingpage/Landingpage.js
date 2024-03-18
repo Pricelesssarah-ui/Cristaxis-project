@@ -10,7 +10,7 @@ import Icon15k from "../../assets/images/svgs/icon_15k.svg";
 import IconCoverage from "../../assets/images/svgs/icon_coverage.svg";
 import Icon150k from "../../assets/images/svgs/icon_150k.svg";
 import TestimonialImage from "../../assets/images/pngs/testimonial_img.png";
-import TipImg from "../../assets/images/pngs/tip_img.png";
+import Blog1 from "../../assets/images/pngs/blog_1.png";
 import Taxi from "../../assets/images/pngs/taxi_img.png";
 import { Link } from "react-router-dom";
 
@@ -68,39 +68,45 @@ function Landingpage() {
             <div className="allBoxService">
               <div className="serviceBox">
                 <h3>Airport Transfers</h3>
-                <p>we provide transfers to and from all UK airports and seaports. Please get 
-                  in touch for a quote or use the online booking form.</p>
+                <p>
+                  we provide transfers to and from all UK airports and seaports.
+                  Please get in touch for a quote or use the online booking
+                  form.
+                </p>
               </div>
 
               <div className="serviceBox">
                 <h3>Corporate Travels</h3>
-                <p>We can provide corporate account services to businesses for a regular 
-                  transport of clients, employees or packages. Please get in touch to discuss your needs.
+                <p>
+                  We can provide corporate account services to businesses for a
+                  regular transport of clients, employees or packages. Please
+                  get in touch to discuss your needs.
                 </p>
               </div>
 
               <div className="serviceBox">
                 <h3>Private Hire</h3>
                 <p>
-                  For short and long-distance journeys, let us get you there in comfort. 
-                  Please use our booking form to pre-book a journey.
+                  For short and long-distance journeys, let us get you there in
+                  comfort. Please use our booking form to pre-book a journey.
                 </p>
               </div>
-              
+
               <div className="serviceBox ">
                 <h3>MPV Hire</h3>
                 <p>
-                  For short and long-distance journeys, let us get you there in comfort. 
-                  Please use our booking form to pre-book a journey.
+                  For short and long-distance journeys, let us get you there in
+                  comfort. Please use our booking form to pre-book a journey.
                 </p>
               </div>
 
               <div className="serviceBox">
                 <h3>Event Hire</h3>
                 <p>
-                  our event hire service caters to the needs of hosts who want taxis to shuttle 
-                  their guests to or from private or corporate events. Vehicles and drivers are hired at an 
-                  hourly rate and will remain on site when they are not transporting guests.
+                  our event hire service caters to the needs of hosts who want
+                  taxis to shuttle their guests to or from private or corporate
+                  events. Vehicles and drivers are hired at an hourly rate and
+                  will remain on site when they are not transporting guests.
                 </p>
               </div>
             </div>
@@ -153,8 +159,10 @@ function Landingpage() {
                 </div>
                 <div className="testimonialBox">
                   <p className="testimony">
-                    I can’t recommend Cris taxi’s enough!! Always on time, waiting with a smile, friendly conversation 
-                    and gets you were you want to be smoothly and safely if I could give 6 stars I would.
+                    I can’t recommend Cris taxi’s enough!! Always on time,
+                    waiting with a smile, friendly conversation and gets you
+                    were you want to be smoothly and safely if I could give 6
+                    stars I would.
                   </p>
                   <p className="thename pt-6">Paloma</p>
                 </div>
@@ -178,7 +186,8 @@ function Landingpage() {
                 </div>
                 <div className="testimonialBox">
                   <p className="testimony">
-                  Cris Taxi was a delight and the service was perfect. I highly recommend.
+                    Cris Taxi was a delight and the service was perfect. I
+                    highly recommend.
                   </p>
                   <p className="thename mt-10 pt-10">James</p>
                 </div>
@@ -211,7 +220,7 @@ function Landingpage() {
               >
                 <div className="inline-block py-2 cursor-pointer hover:scale-105 ease-in-out duration-300 ">
                   <div className="tipsInner flex flex-col items-center">
-                    <img src={TipImg} alt="tips" />
+                    <img src={Blog1} alt="tips" />
                     <p className="tipbenefit">Benefits of a chauffeur</p>
                     <p className="tipTime">2 min read • 23/08/2023</p>
                   </div>
@@ -219,7 +228,7 @@ function Landingpage() {
 
                 <div className="inline-block py-2 cursor-pointer hover:scale-105 ease-in-out duration-300 ">
                   <div className="tipsInner flex flex-col items-center">
-                    <img src={TipImg} alt="tips" />
+                    <img src={Blog1} alt="tips" />
                     <p className="tipbenefit">Benefits of a chauffeur</p>
                     <p className="tipTime">2 min read • 23/08/2023</p>
                   </div>
@@ -227,7 +236,7 @@ function Landingpage() {
 
                 <div className="inline-block py-2 cursor-pointer hover:scale-105 ease-in-out duration-300 ">
                   <div className="tipsInner flex flex-col items-center">
-                    <img src={TipImg} alt="tips" />
+                    <img src={Blog1} alt="tips" />
                     <p className="tipbenefit">Benefits of a chauffeur</p>
                     <p className="tipTime">2 min read • 23/08/2023</p>
                   </div>
@@ -235,7 +244,7 @@ function Landingpage() {
 
                 <div className="inline-block py-2 cursor-pointer hover:scale-105 ease-in-out duration-300 ">
                   <div className="tipsInner flex flex-col items-center">
-                    <img src={TipImg} alt="tips" />
+                    <img src={Blog1} alt="tips" />
                     <p className="tipbenefit">Benefits of a chauffeur</p>
                     <p className="tipTime">2 min read • 23/08/2023</p>
                   </div>
@@ -243,7 +252,7 @@ function Landingpage() {
 
                 <div className="inline-block py-2 cursor-pointer hover:scale-105 ease-in-out duration-300 ">
                   <div className="tipsInner flex flex-col items-center">
-                    <img src={TipImg} alt="tips" />
+                    <img src={Blog1} alt="tips" />
                     <p className="tipbenefit">Benefits of a chauffeur</p>
                     <p className="tipTime">2 min read • 23/08/2023</p>
                   </div>
@@ -251,7 +260,7 @@ function Landingpage() {
 
                 <div className="inline-block py-2 cursor-pointer hover:scale-105 ease-in-out duration-300 ">
                   <div className="tipsInner flex flex-col items-center ">
-                    <img src={TipImg} alt="tips" />
+                    <img src={Blog1} alt="tips" />
                     <p className="tipbenefit">Benefits of a chauffeur</p>
                     <p className="tipTime">2 min read • 23/08/2023</p>
                   </div>

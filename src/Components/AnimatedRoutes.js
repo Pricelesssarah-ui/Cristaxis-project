@@ -13,6 +13,8 @@ import SuccessBooking from "./SuccessBooking/SuccessBooking";
 import Terms from "./Terms/Terms";
 import Cancellation from "./Cancellation/Cancellation";
 import Booking from "./Booking/Booking";
+import BlogPost1 from "./Blog/BlogPost1/BlogPost1";
+import BlogPost2 from "./Blog/BlogPost2/BlogPost2";
 
 function AnimatedRoutes() {
   const [nav, setNav] = useState(false);
@@ -31,6 +33,9 @@ function AnimatedRoutes() {
         <Route path="/SuccessBooking" element={<SuccessBooking />} />
         <Route path="/Terms" element={<Terms />} />
         <Route path="/Cancellation" element={<Cancellation />} />
+        <Route path="/Blog/BlogPost1" element={<BlogPost1 />} />
+        <Route path="/Blog/BlogPost2" element={<BlogPost2 />} />
+        <Route path="/Blog/BlogPost1/BlogPost2" element={<BlogPost2 />} />
       </Routes>
       <Footer />
     </AnimatePresence>

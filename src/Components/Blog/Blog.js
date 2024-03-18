@@ -3,73 +3,90 @@ import { motion } from "framer-motion";
 
 import "./Blog.css";
 
-import TipImg from "../../assets/images/pngs/tip_img.png";
+import Blog1 from "../../assets/images/pngs/blog_1.png";
+import Blog2 from "../../assets/images/pngs/blog_2.png";
 import Arrow from "../../assets/images//svgs/arrow_icon.svg";
 import Taxi from "../../assets/images/pngs/taxi_img.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import "./BlogPost1/BlogPost1";
+import "./BlogPost2/BlogPost2";
 
 function Blog() {
+  const navigate = useNavigate();
   const data = [
     {
       id: 1,
-      imgUrl: TipImg,
+      imgUrl: Blog1,
       content: "Benefits of a chauffeur",
-      dateTime: "2 min read • 23/08/2023",
+      dateTime: "3 min read • 01/03/2024",
+      link: "./BlogPost1",
     },
     {
       id: 2,
-      imgUrl: TipImg,
-      content: "Benefits of a chauffeur",
-      dateTime: "2 min read • 23/08/2023",
+      imgUrl: Blog2,
+      content: "Safety tips when using a taxi",
+      dateTime: "2 min read • 28/02/2024",
+      link: "./BlogPost2",
     },
     {
       id: 3,
-      imgUrl: TipImg,
+      imgUrl: Blog1,
       content: "Benefits of a chauffeur",
-      dateTime: "2 min read • 23/08/2023",
+      dateTime: "3 min read • 01/03/2024",
+      link: "./BlogPost1",
     },
     {
       id: 4,
-      imgUrl: TipImg,
+      imgUrl: Blog1,
       content: "Benefits of a chauffeur",
-      dateTime: "2 min read • 23/08/2023",
+      dateTime: "3 min read • 01/03/2024",
+      link: "./BlogPost1",
     },
 
     {
       id: 5,
-      imgUrl: TipImg,
+      imgUrl: Blog1,
       content: "Benefits of a chauffeur",
-      dateTime: "2 min read • 23/08/2023",
+      dateTime: "3 min read • 01/03/2024",
+      link: "./BlogPost1",
     },
 
     {
       id: 6,
-      imgUrl: TipImg,
+      imgUrl: Blog1,
       content: "Benefits of a chauffeur",
-      dateTime: "2 min read • 23/08/2023",
+      dateTime: "3 min read • 01/03/2024",
+      link: "./BlogPost1",
     },
 
     {
       id: 7,
-      imgUrl: TipImg,
+      imgUrl: Blog1,
       content: "Benefits of a chauffeur",
-      dateTime: "2 min read • 23/08/2023",
+      dateTime: "3 min read • 01/03/2024",
+      link: "./BlogPost1",
     },
 
     {
       id: 8,
-      imgUrl: TipImg,
+      imgUrl: Blog1,
       content: "Benefits of a chauffeur",
-      dateTime: "2 min read • 23/08/2023",
+      dateTime: "3 min read • 01/03/2024",
+      link: "./BlogPost1",
     },
 
     {
       id: 9,
-      imgUrl: TipImg,
+      imgUrl: Blog1,
       content: "Benefits of a chauffeur",
-      dateTime: "2 min read • 23/08/2023",
+      dateTime: "3 min read • 01/03/2024",
+      link: "./BlogPost1",
     },
   ];
+
+  const handleClick = (link) => {
+    navigate(link);
+  };
 
   return (
     <motion.div
@@ -85,10 +102,11 @@ function Blog() {
               <h1>Tips and Updates</h1>
 
               <div className="blogImg TipText py-4">
-                {data.map(({ id, imgUrl, content, dateTime }) => (
+                {data.map(({ id, imgUrl, link, content, dateTime }) => (
                   <div
                     key={id}
                     className="tipsInner py-4 flex flex-col items-center cursor-pointer hover:scale-105 ease-in-out duration-300"
+                    onClick={() => handleClick(link)}
                   >
                     <img src={imgUrl} alt={`Tip ${id}`} />
                     <p className="tipbenefit">{content}</p>
