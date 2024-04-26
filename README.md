@@ -33,7 +33,7 @@ TECHNOLOGIES USED
 
 CONCLUSION
 
-I chose React for this project because it helps build modern web applications using reusable components, making development modular and maintainable. React is versatile and can integrate with other libraries and frameworks.
+React was choosen for this project because it helps build modern web applications using reusable components, making development modular and maintainable. React is versatile and can integrate with other libraries and frameworks.
 
 In hindsight, I might have used Next.js instead because it has built-in routing for easier navigation setup and provides built-in image optimization for better performance. Next.js also allows for creating API routes within the application, making it simpler to handle backend functionality.
   
