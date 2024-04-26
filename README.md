@@ -29,6 +29,7 @@ TECHNOLOGIES USED
   - Design: figma
   - Frontend: Reactjs and Tailwind CSS
   - Backend: Nodejs
+  - Hosted: CPanel and Vercel
 
 CONCLUSION
 
