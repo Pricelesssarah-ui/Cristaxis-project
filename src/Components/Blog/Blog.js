@@ -19,28 +19,28 @@ function Blog() {
       imgUrl: Blog1,
       content: "Benefits of a chauffeur",
       dateTime: "3 min read • 01/03/2024",
-      link: "./BlogPost1",
+      link: "/blog/blogpost1",
     },
     {
       id: 2,
       imgUrl: Blog2,
       content: "Safety tips when using a taxi",
       dateTime: "2 min read • 28/02/2024",
-      link: "./BlogPost2",
+      link: "/blog/blogpost2",
     },
     {
       id: 3,
       imgUrl: Blog1,
       content: "Benefits of a chauffeur",
       dateTime: "3 min read • 01/03/2024",
-      link: "./BlogPost1",
+      link: "/blog/blogpost1",
     },
     {
       id: 4,
       imgUrl: Blog1,
       content: "Benefits of a chauffeur",
       dateTime: "3 min read • 01/03/2024",
-      link: "./BlogPost1",
+      link: "/blog/blogpost1",
     },
 
     {
@@ -48,7 +48,7 @@ function Blog() {
       imgUrl: Blog1,
       content: "Benefits of a chauffeur",
       dateTime: "3 min read • 01/03/2024",
-      link: "./BlogPost1",
+      link: "/blog/blogpost1",
     },
 
     {
@@ -56,7 +56,7 @@ function Blog() {
       imgUrl: Blog1,
       content: "Benefits of a chauffeur",
       dateTime: "3 min read • 01/03/2024",
-      link: "./BlogPost1",
+      link: "/blog/blogpost1",
     },
 
     {
@@ -64,7 +64,7 @@ function Blog() {
       imgUrl: Blog1,
       content: "Benefits of a chauffeur",
       dateTime: "3 min read • 01/03/2024",
-      link: "./BlogPost1",
+      link: "/blog/blogpost1",
     },
 
     {
@@ -72,7 +72,7 @@ function Blog() {
       imgUrl: Blog1,
       content: "Benefits of a chauffeur",
       dateTime: "3 min read • 01/03/2024",
-      link: "./BlogPost1",
+      link: "/blog/blogpost1",
     },
 
     {
@@ -80,7 +80,7 @@ function Blog() {
       imgUrl: Blog1,
       content: "Benefits of a chauffeur",
       dateTime: "3 min read • 01/03/2024",
-      link: "./BlogPost1",
+      link: "/blog/blogpost1",
     },
   ];
 

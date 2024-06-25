@@ -113,7 +113,7 @@ const BlogPost1 = () => {
             View all <img src={Arrow} className="pl-2" alt="arrow" />{" "}
           </Link>
           <Link
-            to="./BlogPost2"
+            to="/blog/blogpost2"
             className="flex align-center justify-center my-9 font-bold text-lg"
           >
             Next Post <img src={Arrow} className="pl-2" alt="arrow" />{" "}

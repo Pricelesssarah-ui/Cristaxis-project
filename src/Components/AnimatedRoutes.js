@@ -25,17 +25,17 @@ function AnimatedRoutes() {
       <Header nav={nav} setNav={setNav} />
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Landingpage />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="/Booking" element={<Booking />} />
-        <Route path="/Contact us" element={<Contact />} />
-        <Route path="/SuccessContactpage" element={<SuccessContactpage />} />
-        <Route path="/SuccessBooking" element={<SuccessBooking />} />
-        <Route path="/Terms" element={<Terms />} />
-        <Route path="/Cancellation" element={<Cancellation />} />
-        <Route path="/Blog/BlogPost1" element={<BlogPost1 />} />
-        <Route path="/Blog/BlogPost2" element={<BlogPost2 />} />
-        <Route path="/Blog/BlogPost1/BlogPost2" element={<BlogPost2 />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/successContactpage" element={<SuccessContactpage />} />
+        <Route path="/successBooking" element={<SuccessBooking />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/cancellation" element={<Cancellation />} />
+        <Route path="/blog/blogpost1" element={<BlogPost1 />} />
+        <Route path="/blog/blogpost2" element={<BlogPost2 />} />
+        <Route path="/blog/blogpost1/blogpost2" element={<BlogPost2 />} />
       </Routes>
       <Footer />
     </AnimatePresence>
