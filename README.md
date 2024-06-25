@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+CRISTAXIS (A TAXI BOOKING WEBSITE)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cristaxi is an online taxi booking platform that lets users reserve a taxi instantly or schedule one for later. This convenience saves people the hassle of waiting on the street for a taxi. Users can quickly book a ride from their device, making transportation easier and more efficient.
 
-## Available Scripts
+The platform consist of several key interfaces:
 
-In the project directory, you can run:
+- Home Page: A welcoming, user-friendly interface that provides essential information to users.
+- About Page: Provides details about the service, including navigation, content, and footer.
+- Blog Page: Offers posts with tips and updates on using a taxi service.
+- Contact Us Page: Allows users to easily reach the company via email or phone for assistance.
+- Booking Page: Enables users to input their details (name, phone, email), choose pick-up and drop-off locations, select a vehicle type, set date and time, and add notes.
+- Responsive Design: The platform adapts to different screen sizes for optimal user experience.
+  
+FUNCTIONALITIES
 
-### `npm start`
+When a user fills out the booking form and clicks submit, they receive a success notification, and their information is sent to the company's email. Similarly, when a user fills out the contact form, their information is also sent to the company. For more information, users can contact the company via email or phone.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The website uses framer-motion for smooth page transitions, react-router-dom for page navigation, and react-icons for icons.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+API CONSUMPTION
 
-### `npm test`
+- The API endpoint is stored in a .env file in the base folder.
+- The config folder contains fetcher.js for fetching data from the API and handling errors.
+- Each page (booking and contact us) has its own API integration for handling form submissions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  
+TECHNOLOGIES USED
+  
+  - Design: figma
+  - Frontend: Reactjs and Tailwind CSS
+  - Backend: Nodejs
+  - Hosted: CPanel and Vercel
 
-### `npm run build`
+CONCLUSION
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React was choosen for this project because it helps build modern web applications using reusable components, making development modular and maintainable. React is versatile and can integrate with other libraries and frameworks.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In hindsight, I might have used Next.js instead because it has built-in routing for easier navigation setup and provides built-in image optimization for better performance. Next.js also allows for creating API routes within the application, making it simpler to handle backend functionality.
+  
